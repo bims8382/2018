@@ -299,7 +299,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">BIMS8382</a>
+      <a class="navbar-brand" href="index.html">BIMS 8382 Spring 2018</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -323,62 +323,6 @@ div.tocify {
      
     Data
   </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-book"></span>
-     
-    Workshops
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="r-basics.html">R Basics</a>
-    </li>
-    <li>
-      <a href="r-dataframes.html">Data Frames</a>
-    </li>
-    <li>
-      <a href="r-dplyr-yeast.html">Data Manipulation</a>
-    </li>
-    <li>
-      <a href="r-tidy.html">Tidying data</a>
-    </li>
-    <li>
-      <a href="r-lists.html">List Manipulation</a>
-    </li>
-    <li>
-      <a href="r-interactive-viz.html">Interactive Visualization with JavaScript and R</a>
-    </li>
-    <li>
-      <a href="r-shiny.html">Building Shiny Web Apps in R</a>
-    </li>
-    <li>
-      <a href="r-ncbi.html">Harvesting Data from NCBI</a>
-    </li>
-    <li>
-      <a href="r-viz-gapminder.html">Data Visualization</a>
-    </li>
-    <li>
-      <a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a>
-    </li>
-    <li>
-      <a href="r-stats.html">Essential Statistics with R</a>
-    </li>
-    <li>
-      <a href="r-survival.html">Survival Analysis with TCGA Data</a>
-    </li>
-    <li>
-      <a href="r-ggtree.html">Drawing &amp; annotating phylogenetic trees</a>
-    </li>
-    <li>
-      <a href="r-rnaseq-airway.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
-    </li>
-  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -423,6 +367,9 @@ div.tocify {
     <li>
       <a href="r-rnaseq-airway.html">RNA-Seq Data Analysis</a>
     </li>
+    <li>
+      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">--- Homework ---</li>
     <li>
@@ -439,9 +386,6 @@ div.tocify {
     </li>
     <li>
       <a href="r-rnaseq-homework.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
     </li>
   </ul>
 </li>
@@ -462,7 +406,7 @@ div.tocify {
       <a href="help.html">Further resources</a>
     </li>
     <li>
-      <a href="https://github.com/bioconnector/workshops">Source code for this site</a>
+      <a href="https://github.com/bims8382/2018">Source code for this site</a>
     </li>
   </ul>
 </li>
@@ -486,7 +430,7 @@ div.tocify {
 <div id="our-data" class="section level2">
 <h2>Our data</h2>
 <!-- There are some built-in data frames that ship with R that you'll often see people referencing in help forums or other places to demonstrate some functionality. The `mtcars` data frame has data extracted from the 1974 _Motor Trend_ magazine giving statistics about design and performance for 32 different vehicles. You can just type `mtcars` to look at the whole dataset. -->
-<p>The data we’re going to look at is cleaned up version of a gene expression dataset from <a href="http://www.ncbi.nlm.nih.gov/pubmed/17959824">Brauer et al. Coordination of Growth Rate, Cell Cycle, Stress Response, and Metabolic Activity in Yeast (2008) <em>Mol Biol Cell</em> 19:352-367</a>. This data is from a gene expression microarray, and in this paper the authors are examining the relationship between growth rate and gene expression in yeast cultures limited by one of six different nutrients (glucose, leucine, ammonium, sulfate, phosphate, uracil). If you give yeast a rich media loaded with nutrients except restrict the supply of a <em>single</em> nutrient, you can control the growth rate to any rate you choose. By starving yeast of specific nutrients you can find genes that:</p>
+<p>The data we’re going to look at is cleaned up version of a gene expression dataset from <a href="http://www.ncbi.nlm.nih.gov/pubmed/17959824">Brauer et al. Coordination of Growth Rate, Cell Cycle, Stress Response, and Metabolic Activity in Yeast (2008) <em>Mol Biol Cell</em> 19:352-367</a>. This data is from a gene expression microarray, and in this paper the authors are examining the relationship between growth rate and gene expression in yeast cultures limited by one of six different nutrients (glucose, leucine, ammonium, sulfate, phosphate, uracil). If you give yeast a rich media loaded with nutrients except restrict the supply of a <em>single</em> nutrient, you can control the growth rate to any rate you choose. By starving yeast of specific nutrients you can find genes that:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Raise or lower their expression in response to growth rate</strong>. Growth-rate dependent expression patterns can tell us a lot about cell cycle control, and how the cell responds to stress. The authors found that expression of &gt;25% of all yeast genes is linearly correlated with growth rate, independent of the limiting nutrient. They also found that the subset of negatively growth-correlated genes is enriched for peroxisomal functions, and positively correlated genes mainly encode ribosomal functions.</li>
 <li><strong>Respond differently when different nutrients are being limited</strong>. If you see particular genes that respond very differently when a nutrient is sharply restricted, these genes might be involved in the transport or metabolism of that specific nutrient.</li>
@@ -509,19 +453,19 @@ library(dplyr)</code></pre>
 <pre class="r"><code>ydat &lt;- read_csv(file=&quot;data/brauer2007_tidy.csv&quot;)
 ydat</code></pre>
 <pre><code>## # A tibble: 198,430 x 7
-##    symbol systematic_name nutrient  rate expression
-##     &lt;chr&gt;           &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;
-##  1   SFB2         YNL049C  Glucose  0.05      -0.24
-##  2   &lt;NA&gt;         YNL095C  Glucose  0.05       0.28
-##  3   QRI7         YDL104C  Glucose  0.05      -0.02
-##  4   CFT2         YLR115W  Glucose  0.05      -0.33
-##  5   SSO2         YMR183C  Glucose  0.05       0.05
-##  6   PSP2         YML017W  Glucose  0.05      -0.69
-##  7   RIB2         YOL066C  Glucose  0.05      -0.55
-##  8  VMA13         YPR036W  Glucose  0.05      -0.75
-##  9   EDC3         YEL015W  Glucose  0.05      -0.24
-## 10   VPS5         YOR069W  Glucose  0.05      -0.16
-## # ... with 198,420 more rows, and 2 more variables: bp &lt;chr&gt;, mf &lt;chr&gt;</code></pre>
+##    symbol systematic_name nutrient   rate expression bp        mf         
+##    &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt;     &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;      
+##  1 SFB2   YNL049C         Glucose  0.0500    -0.240  ER to Go… molecular …
+##  2 &lt;NA&gt;   YNL095C         Glucose  0.0500     0.280  biologic… molecular …
+##  3 QRI7   YDL104C         Glucose  0.0500    -0.0200 proteoly… metalloend…
+##  4 CFT2   YLR115W         Glucose  0.0500    -0.330  mRNA pol… RNA binding
+##  5 SSO2   YMR183C         Glucose  0.0500     0.0500 vesicle … t-SNARE ac…
+##  6 PSP2   YML017W         Glucose  0.0500    -0.690  biologic… molecular …
+##  7 RIB2   YOL066C         Glucose  0.0500    -0.550  riboflav… pseudourid…
+##  8 VMA13  YPR036W         Glucose  0.0500    -0.750  vacuolar… hydrogen-t…
+##  9 EDC3   YEL015W         Glucose  0.0500    -0.240  deadenyl… molecular …
+## 10 VPS5   YOR069W         Glucose  0.0500    -0.160  protein … protein tr…
+## # ... with 198,420 more rows</code></pre>
 <p>Take a look at that output. The nice thing about loading dplyr and reading in data with readr is that data frames are displayed in a much more friendly way. This dataset has nearly 200,000 rows and 7 columns. When you import data this way and try to display the object in the console, instead of trying to display all 200,000 rows, you’ll only see about 10 by default. Also, if you have so many columns that the data would wrap off the edge of your screen, those columns will not be displayed, but you’ll see at the bottom of the output which, if any, columns were hidden from view. If you want to see the whole dataset, there are two ways to do this. First, you can click on the name of the data.frame in the <strong>Environment</strong> panel in RStudio. Or you could use the <code>View()</code> function (<em>with a capital V</em>).</p>
 <pre class="r"><code>View(ydat)</code></pre>
 </div>
@@ -550,26 +494,24 @@ ydat</code></pre>
 </ul>
 <pre class="r"><code>head(ydat)</code></pre>
 <pre><code>## # A tibble: 6 x 7
-##   symbol systematic_name nutrient  rate expression
-##    &lt;chr&gt;           &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;
-## 1   SFB2         YNL049C  Glucose  0.05      -0.24
-## 2   &lt;NA&gt;         YNL095C  Glucose  0.05       0.28
-## 3   QRI7         YDL104C  Glucose  0.05      -0.02
-## 4   CFT2         YLR115W  Glucose  0.05      -0.33
-## 5   SSO2         YMR183C  Glucose  0.05       0.05
-## 6   PSP2         YML017W  Glucose  0.05      -0.69
-## # ... with 2 more variables: bp &lt;chr&gt;, mf &lt;chr&gt;</code></pre>
+##   symbol systematic_name nutrient   rate expression bp          mf        
+##   &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt;     &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;     
+## 1 SFB2   YNL049C         Glucose  0.0500    -0.240  ER to Golg… molecular…
+## 2 &lt;NA&gt;   YNL095C         Glucose  0.0500     0.280  biological… molecular…
+## 3 QRI7   YDL104C         Glucose  0.0500    -0.0200 proteolysi… metalloen…
+## 4 CFT2   YLR115W         Glucose  0.0500    -0.330  mRNA polya… RNA bindi…
+## 5 SSO2   YMR183C         Glucose  0.0500     0.0500 vesicle fu… t-SNARE a…
+## 6 PSP2   YML017W         Glucose  0.0500    -0.690  biological… molecular…</code></pre>
 <pre class="r"><code>tail(ydat)</code></pre>
 <pre><code>## # A tibble: 6 x 7
-##   symbol systematic_name nutrient  rate expression
-##    &lt;chr&gt;           &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;      &lt;dbl&gt;
-## 1   DOA1         YKL213C   Uracil   0.3       0.14
-## 2   KRE1         YNL322C   Uracil   0.3       0.28
-## 3   MTL1         YGR023W   Uracil   0.3       0.27
-## 4   KRE9         YJL174W   Uracil   0.3       0.43
-## 5   UTH1         YKR042W   Uracil   0.3       0.19
-## 6   &lt;NA&gt;         YOL111C   Uracil   0.3       0.04
-## # ... with 2 more variables: bp &lt;chr&gt;, mf &lt;chr&gt;</code></pre>
+##   symbol systematic_name nutrient  rate expression bp           mf        
+##   &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt;    &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;     
+## 1 DOA1   YKL213C         Uracil   0.300     0.140  ubiquitin-d… molecular…
+## 2 KRE1   YNL322C         Uracil   0.300     0.280  cell wall o… structura…
+## 3 MTL1   YGR023W         Uracil   0.300     0.270  cell wall o… molecular…
+## 4 KRE9   YJL174W         Uracil   0.300     0.430  cell wall o… molecular…
+## 5 UTH1   YKR042W         Uracil   0.300     0.190  mitochondri… molecular…
+## 6 &lt;NA&gt;   YOL111C         Uracil   0.300     0.0400 biological … molecular…</code></pre>
 <pre class="r"><code>dim(ydat)</code></pre>
 <pre><code>## [1] 198430      7</code></pre>
 <pre class="r"><code>names(ydat)</code></pre>

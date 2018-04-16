@@ -11,7 +11,7 @@
 
 
 
-<title>UVA HSL Research &amp; Data Courses</title>
+<title>BIMS8382 Spring 2018</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -188,107 +185,6 @@ $(document).ready(function () {
 
 
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
 
 
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
@@ -299,7 +195,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">BIMS8382</a>
+      <a class="navbar-brand" href="index.html">BIMS 8382 Spring 2018</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -323,62 +219,6 @@ div.tocify {
      
     Data
   </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-book"></span>
-     
-    Workshops
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="r-basics.html">R Basics</a>
-    </li>
-    <li>
-      <a href="r-dataframes.html">Data Frames</a>
-    </li>
-    <li>
-      <a href="r-dplyr-yeast.html">Data Manipulation</a>
-    </li>
-    <li>
-      <a href="r-tidy.html">Tidying data</a>
-    </li>
-    <li>
-      <a href="r-lists.html">List Manipulation</a>
-    </li>
-    <li>
-      <a href="r-interactive-viz.html">Interactive Visualization with JavaScript and R</a>
-    </li>
-    <li>
-      <a href="r-shiny.html">Building Shiny Web Apps in R</a>
-    </li>
-    <li>
-      <a href="r-ncbi.html">Harvesting Data from NCBI</a>
-    </li>
-    <li>
-      <a href="r-viz-gapminder.html">Data Visualization</a>
-    </li>
-    <li>
-      <a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a>
-    </li>
-    <li>
-      <a href="r-stats.html">Essential Statistics with R</a>
-    </li>
-    <li>
-      <a href="r-survival.html">Survival Analysis with TCGA Data</a>
-    </li>
-    <li>
-      <a href="r-ggtree.html">Drawing &amp; annotating phylogenetic trees</a>
-    </li>
-    <li>
-      <a href="r-rnaseq-airway.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
-    </li>
-  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -423,6 +263,9 @@ div.tocify {
     <li>
       <a href="r-rnaseq-airway.html">RNA-Seq Data Analysis</a>
     </li>
+    <li>
+      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">--- Homework ---</li>
     <li>
@@ -439,9 +282,6 @@ div.tocify {
     </li>
     <li>
       <a href="r-rnaseq-homework.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
     </li>
   </ul>
 </li>
@@ -462,7 +302,7 @@ div.tocify {
       <a href="help.html">Further resources</a>
     </li>
     <li>
-      <a href="https://github.com/bioconnector/workshops">Source code for this site</a>
+      <a href="https://github.com/bims8382/2018">Source code for this site</a>
     </li>
   </ul>
 </li>
@@ -475,24 +315,45 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">UVA HSL Research &amp; Data Courses</h1>
+<h1 class="title toc-ignore">BIMS8382 Spring 2018</h1>
 
 </div>
 
 
 <div id="bims-8382" class="section level3">
 <h3>BIMS 8382</h3>
-<p><strong><a href="bims8382.html">BIMS 8382</a></strong> is a graduate class that will run in Spring 2018. Please see the <a href="bims8382.html">BIMS 8382 syllabus</a> for more information.</p>
+<p><strong><a href="bims8382.html">BIMS 8382</a></strong> is a graduate class that runs every Spring semester. This is the archival site for the course that ran in Spring 2018. Please see the <a href="bims8382.html">BIMS 8382 syllabus</a> for more information.</p>
+<p>This course introduces methods, tools, and software for reproducibly managing, manipulating, analyzing, and visualizing large-scale biomedical data. Specifically, the course introduces the R statistical computing environment and packages for manipulating and visualizing high-dimensional data, covers strategies for reproducible research, and culminates with analyses of real experimental NGS data using R and Bioconductor packages.</p>
+<p><strong><a href="https://github.com/bims8382/2018/archive/master.zip">Click here to download the entire course archive as a zip file.</a></strong> Once downloaded and extracted, double-click the <strong><code>index.html</code></strong> file in the extracted folder to view the course material offline.</p>
 </div>
-<div id="workshops" class="section level3">
-<h3>Workshops</h3>
-<p>Register at <strong><a href="http://data.hsl.virginia.edu/">data.hsl.virginia.edu</a></strong>.</p>
-<p>These workshops introduce methods, tools, and software for reproducibly managing, manipulating, analyzing, and visualizing large-scale biomedical data using the R statistical computing environment. Visit <a href="http://data.hsl.virginia.edu/">data.hsl.virginia.edu</a> to register.</p>
-<p><strong><em>IMPORTANT</em>: <a href="setup.html">Click here for instructions on setting up your computer for any of these workshops</a>.</strong> Each workshop involves lots of hands-on practice coding, and you’ll need to download and install some free software <strong><em>prior to our first class</em></strong>. This may take up to an hour or so, and please do not hesitate to <a href="people.html">email one of the instructors</a> <em>prior to the workshop</em> if you are having difficulty.</p>
+<div id="course-material" class="section level3">
+<h3>Course Material</h3>
+<div id="lesson-transcripts-code" class="section level4">
+<h4>Lesson transcripts &amp; code</h4>
+<ol style="list-style-type: decimal">
+<li><a href="r-basics.html">R Basics</a></li>
+<li><a href="r-dataframes.html">Data Frames</a></li>
+<li><a href="r-dplyr-yeast.html">Data Manipulation</a></li>
+<li><a href="r-tidy.html">Tidying data</a></li>
+<li><a href="r-viz-gapminder.html">Data Visualization</a></li>
+<li><a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a></li>
+<li><a href="r-stats.html">Essential Statistics with R</a></li>
+<li><a href="r-survival.html">Survival Analysis with TCGA Data</a></li>
+<li><a href="r-rnaseq-airway.html">RNA-seq data analysis</a></li>
+<li><a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a></li>
+</ol>
 </div>
-<div id="thriv-data-science" class="section level3">
-<h3>THRIV Data Science</h3>
-<p>The <a href="thriv.html">THRIV Scholars Data Science Training Program</a> is a seven-part series of courses on the essentials of biological data science directed toward junior faculty seeking a clinical and translational research career. Please see the <a href="thriv.html">THRIV syllabus</a> for more information.</p>
+<div id="homework-assignments" class="section level4">
+<h4>Homework assignments</h4>
+<ol style="list-style-type: decimal">
+<li><a href="r-dplyr-homework.html">Data Manipulation</a></li>
+<li><a href="r-viz-homework.html">Data Visualization</a></li>
+<li><a href="r-rmarkdown-homework.html">Reproducible Research &amp; RMarkdown</a></li>
+<li><a href="r-stats-homework.html">Essential Statistics</a></li>
+<li><a href="r-rnaseq-homework.html">RNA-seq data analysis</a></li>
+</ol>
+<hr />
+</div>
 </div>
 <div id="faq" class="section level3">
 <h3>FAQ</h3>
@@ -546,8 +407,6 @@ For more information, visit <a href="http://data.hsl.virginia.edu/" target="_bla
 </div>
 
 
-</div>
-</div>
 
 </div>
 

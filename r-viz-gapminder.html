@@ -299,7 +299,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">BIMS8382</a>
+      <a class="navbar-brand" href="index.html">BIMS 8382 Spring 2018</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -323,62 +323,6 @@ div.tocify {
      
     Data
   </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-book"></span>
-     
-    Workshops
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="r-basics.html">R Basics</a>
-    </li>
-    <li>
-      <a href="r-dataframes.html">Data Frames</a>
-    </li>
-    <li>
-      <a href="r-dplyr-yeast.html">Data Manipulation</a>
-    </li>
-    <li>
-      <a href="r-tidy.html">Tidying data</a>
-    </li>
-    <li>
-      <a href="r-lists.html">List Manipulation</a>
-    </li>
-    <li>
-      <a href="r-interactive-viz.html">Interactive Visualization with JavaScript and R</a>
-    </li>
-    <li>
-      <a href="r-shiny.html">Building Shiny Web Apps in R</a>
-    </li>
-    <li>
-      <a href="r-ncbi.html">Harvesting Data from NCBI</a>
-    </li>
-    <li>
-      <a href="r-viz-gapminder.html">Data Visualization</a>
-    </li>
-    <li>
-      <a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a>
-    </li>
-    <li>
-      <a href="r-stats.html">Essential Statistics with R</a>
-    </li>
-    <li>
-      <a href="r-survival.html">Survival Analysis with TCGA Data</a>
-    </li>
-    <li>
-      <a href="r-ggtree.html">Drawing &amp; annotating phylogenetic trees</a>
-    </li>
-    <li>
-      <a href="r-rnaseq-airway.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
-    </li>
-  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -423,6 +367,9 @@ div.tocify {
     <li>
       <a href="r-rnaseq-airway.html">RNA-Seq Data Analysis</a>
     </li>
+    <li>
+      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">--- Homework ---</li>
     <li>
@@ -439,9 +386,6 @@ div.tocify {
     </li>
     <li>
       <a href="r-rnaseq-homework.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
     </li>
   </ul>
 </li>
@@ -462,7 +406,7 @@ div.tocify {
       <a href="help.html">Further resources</a>
     </li>
     <li>
-      <a href="https://github.com/bioconnector/workshops">Source code for this site</a>
+      <a href="https://github.com/bims8382/2018">Source code for this site</a>
     </li>
   </ul>
 </li>
@@ -498,18 +442,18 @@ gm &lt;- read_csv(file=&quot;data/gapminder.csv&quot;)
 # Show the first few lines of the data
 gm</code></pre>
 <pre><code>## # A tibble: 1,704 x 6
-##        country continent  year lifeExp      pop gdpPercap
-##          &lt;chr&gt;     &lt;chr&gt; &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
-##  1 Afghanistan      Asia  1952    28.8  8425333       779
-##  2 Afghanistan      Asia  1957    30.3  9240934       821
-##  3 Afghanistan      Asia  1962    32.0 10267083       853
-##  4 Afghanistan      Asia  1967    34.0 11537966       836
-##  5 Afghanistan      Asia  1972    36.1 13079460       740
-##  6 Afghanistan      Asia  1977    38.4 14880372       786
-##  7 Afghanistan      Asia  1982    39.9 12881816       978
-##  8 Afghanistan      Asia  1987    40.8 13867957       852
-##  9 Afghanistan      Asia  1992    41.7 16317921       649
-## 10 Afghanistan      Asia  1997    41.8 22227415       635
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;chr&gt;       &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1952    28.8  8425333       779
+##  2 Afghanistan Asia       1957    30.3  9240934       821
+##  3 Afghanistan Asia       1962    32.0 10267083       853
+##  4 Afghanistan Asia       1967    34.0 11537966       836
+##  5 Afghanistan Asia       1972    36.1 13079460       740
+##  6 Afghanistan Asia       1977    38.4 14880372       786
+##  7 Afghanistan Asia       1982    39.9 12881816       978
+##  8 Afghanistan Asia       1987    40.8 13867957       852
+##  9 Afghanistan Asia       1992    41.7 16317921       649
+## 10 Afghanistan Asia       1997    41.8 22227415       635
 ## # ... with 1,694 more rows</code></pre>
 <pre class="r"><code># Optionally bring up data in a viewer window.
 # View(gm)</code></pre>
@@ -535,10 +479,7 @@ gm</code></pre>
 <li><code>group_by()</code>: groups a data frame by one or more variable. Most data operations are useful done on groups defined by variables in the the dataset. The <code>group_by</code> function takes an existing data frame and converts it into a grouped data frame where <code>summarize()</code> operations are performed <em>by group</em>.</li>
 </ol>
 <p>Additionally, the <strong><code>%&gt;%</code></strong> operator allows you to “chain” operations together. Rather than nesting functions inside out, the <code>%&gt;%</code> operator allows you to write operations left-to-right, top-to-bottom. Let’s say we wanted to get the average life expectancy and GDP (not GDP per capita) for Asian countries for each year.</p>
-<div class="figure">
-<img src="img/nest_vs_pipe_gm.png" />
-
-</div>
+<p><img src="img/nest_vs_pipe_gm.png" /></p>
 <p>The <code>%&gt;%</code> would allow us to do this:</p>
 <pre class="r"><code>gm %&gt;%
   mutate(gdp=gdpPercap*pop) %&gt;%
@@ -546,20 +487,20 @@ gm</code></pre>
   group_by(year) %&gt;%
   summarize(mean(lifeExp), mean(gdp))</code></pre>
 <pre><code>## # A tibble: 12 x 3
-##     year `mean(lifeExp)` `mean(gdp)`
-##    &lt;int&gt;           &lt;dbl&gt;       &lt;dbl&gt;
-##  1  1952            46.3    3.41e+10
-##  2  1957            49.3    4.73e+10
-##  3  1962            51.6    6.01e+10
-##  4  1967            54.7    8.46e+10
-##  5  1972            57.3    1.24e+11
-##  6  1977            59.6    1.60e+11
-##  7  1982            62.6    1.94e+11
-##  8  1987            64.9    2.42e+11
-##  9  1992            66.5    3.07e+11
-## 10  1997            68.0    3.88e+11
-## 11  2002            69.2    4.58e+11
-## 12  2007            70.7    6.28e+11</code></pre>
+##     year `mean(lifeExp)`  `mean(gdp)`
+##    &lt;int&gt;           &lt;dbl&gt;        &lt;dbl&gt;
+##  1  1952            46.3  34095762661
+##  2  1957            49.3  47267432088
+##  3  1962            51.6  60136869012
+##  4  1967            54.7  84648519224
+##  5  1972            57.3 124385747313
+##  6  1977            59.6 159802590186
+##  7  1982            62.6 194429049919
+##  8  1987            64.9 241784763369
+##  9  1992            66.5 307100497486
+## 10  1997            68.0 387597655323
+## 11  2002            69.2 458042336179
+## 12  2007            70.7 627513635079</code></pre>
 <p>Instead of this:</p>
 <pre class="r"><code>summarize(
   group_by(
@@ -624,9 +565,11 @@ p + geom_point() + scale_x_log10()</code></pre>
 <li>Start with the <code>ggplot()</code> function.</li>
 <li>Use the gm data.</li>
 <li>Map <code>gdpPercap</code> to the x-axis and <code>lifeExp</code> to the y-axis.</li>
-<li>Add points to the plot</li>
+<li>Add points to the plot
+<ul>
 <li>Make the points size 3</li>
 <li>Map continent onto the aesthetics of the point</li>
+</ul></li>
 <li>Use a log<sub>10</sub> scale for the x-axis.</li>
 </ul>
 <hr />

@@ -299,7 +299,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">BIMS8382</a>
+      <a class="navbar-brand" href="index.html">BIMS 8382 Spring 2018</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -323,62 +323,6 @@ div.tocify {
      
     Data
   </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-book"></span>
-     
-    Workshops
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="r-basics.html">R Basics</a>
-    </li>
-    <li>
-      <a href="r-dataframes.html">Data Frames</a>
-    </li>
-    <li>
-      <a href="r-dplyr-yeast.html">Data Manipulation</a>
-    </li>
-    <li>
-      <a href="r-tidy.html">Tidying data</a>
-    </li>
-    <li>
-      <a href="r-lists.html">List Manipulation</a>
-    </li>
-    <li>
-      <a href="r-interactive-viz.html">Interactive Visualization with JavaScript and R</a>
-    </li>
-    <li>
-      <a href="r-shiny.html">Building Shiny Web Apps in R</a>
-    </li>
-    <li>
-      <a href="r-ncbi.html">Harvesting Data from NCBI</a>
-    </li>
-    <li>
-      <a href="r-viz-gapminder.html">Data Visualization</a>
-    </li>
-    <li>
-      <a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a>
-    </li>
-    <li>
-      <a href="r-stats.html">Essential Statistics with R</a>
-    </li>
-    <li>
-      <a href="r-survival.html">Survival Analysis with TCGA Data</a>
-    </li>
-    <li>
-      <a href="r-ggtree.html">Drawing &amp; annotating phylogenetic trees</a>
-    </li>
-    <li>
-      <a href="r-rnaseq-airway.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
-    </li>
-  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -423,6 +367,9 @@ div.tocify {
     <li>
       <a href="r-rnaseq-airway.html">RNA-Seq Data Analysis</a>
     </li>
+    <li>
+      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">--- Homework ---</li>
     <li>
@@ -439,9 +386,6 @@ div.tocify {
     </li>
     <li>
       <a href="r-rnaseq-homework.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
     </li>
   </ul>
 </li>
@@ -462,7 +406,7 @@ div.tocify {
       <a href="help.html">Further resources</a>
     </li>
     <li>
-      <a href="https://github.com/bioconnector/workshops">Source code for this site</a>
+      <a href="https://github.com/bims8382/2018">Source code for this site</a>
     </li>
   </ul>
 </li>
@@ -555,19 +499,19 @@ flu &lt;- read_csv(&quot;data/h7n9.csv&quot;)
 # Take a look
 flu</code></pre>
 <pre><code>## # A tibble: 134 x 8
-##    case_id date_onset date_hospitalization date_outcome outcome gender
-##      &lt;chr&gt;     &lt;date&gt;               &lt;date&gt;       &lt;date&gt;   &lt;chr&gt;  &lt;chr&gt;
-##  1  case_1 2013-02-19                   NA   2013-03-04   Death      m
-##  2  case_2 2013-02-27           2013-03-03   2013-03-10   Death      m
-##  3  case_3 2013-03-09           2013-03-19   2013-04-09   Death      f
-##  4  case_4 2013-03-19           2013-03-27           NA    &lt;NA&gt;      f
-##  5  case_5 2013-03-19           2013-03-30   2013-05-15 Recover      f
-##  6  case_6 2013-03-21           2013-03-28   2013-04-26   Death      f
-##  7  case_7 2013-03-20           2013-03-29   2013-04-09   Death      m
-##  8  case_8 2013-03-07           2013-03-18   2013-03-27   Death      m
-##  9  case_9 2013-03-25           2013-03-25           NA    &lt;NA&gt;      m
-## 10 case_10 2013-03-28           2013-04-01   2013-04-03   Death      m
-## # ... with 124 more rows, and 2 more variables: age &lt;int&gt;, province &lt;chr&gt;</code></pre>
+##    case_id date_onset date_hospitalizat… date_outcome outcome gender   age
+##    &lt;chr&gt;   &lt;date&gt;     &lt;date&gt;             &lt;date&gt;       &lt;chr&gt;   &lt;chr&gt;  &lt;int&gt;
+##  1 case_1  2013-02-19 NA                 2013-03-04   Death   m         58
+##  2 case_2  2013-02-27 2013-03-03         2013-03-10   Death   m          7
+##  3 case_3  2013-03-09 2013-03-19         2013-04-09   Death   f         11
+##  4 case_4  2013-03-19 2013-03-27         NA           &lt;NA&gt;    f         18
+##  5 case_5  2013-03-19 2013-03-30         2013-05-15   Recover f         20
+##  6 case_6  2013-03-21 2013-03-28         2013-04-26   Death   f          9
+##  7 case_7  2013-03-20 2013-03-29         2013-04-09   Death   m         54
+##  8 case_8  2013-03-07 2013-03-18         2013-03-27   Death   m         14
+##  9 case_9  2013-03-25 2013-03-25         NA           &lt;NA&gt;    m         39
+## 10 case_10 2013-03-28 2013-04-01         2013-04-03   Death   m         20
+## # ... with 124 more rows, and 1 more variable: province &lt;chr&gt;</code></pre>
 </div>
 <div id="exploratory-data-analysis" class="section level3">
 <h3>Exploratory data analysis</h3>
@@ -603,18 +547,18 @@ flugather &lt;- flu %&gt;%
 # Better: Show the data arranged by case_id so you see the three entries
 flugather %&gt;% arrange(case_id)</code></pre>
 <pre><code>## # A tibble: 402 x 7
-##     case_id outcome gender   age province                  key       date
-##       &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;int&gt;    &lt;chr&gt;                &lt;chr&gt;     &lt;date&gt;
-##  1   case_1   Death      m    58 Shanghai           date_onset 2013-02-19
-##  2   case_1   Death      m    58 Shanghai date_hospitalization         NA
-##  3   case_1   Death      m    58 Shanghai         date_outcome 2013-03-04
-##  4  case_10   Death      m    20 Shanghai           date_onset 2013-03-28
-##  5  case_10   Death      m    20 Shanghai date_hospitalization 2013-04-01
-##  6  case_10   Death      m    20 Shanghai         date_outcome 2013-04-03
-##  7 case_100    &lt;NA&gt;      m    30 Zhejiang           date_onset 2013-04-16
-##  8 case_100    &lt;NA&gt;      m    30 Zhejiang date_hospitalization         NA
-##  9 case_100    &lt;NA&gt;      m    30 Zhejiang         date_outcome         NA
-## 10 case_101    &lt;NA&gt;      f    51 Zhejiang           date_onset 2013-04-13
+##    case_id  outcome gender   age province key                  date      
+##    &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;                &lt;date&gt;    
+##  1 case_1   Death   m         58 Shanghai date_onset           2013-02-19
+##  2 case_1   Death   m         58 Shanghai date_hospitalization NA        
+##  3 case_1   Death   m         58 Shanghai date_outcome         2013-03-04
+##  4 case_10  Death   m         20 Shanghai date_onset           2013-03-28
+##  5 case_10  Death   m         20 Shanghai date_hospitalization 2013-04-01
+##  6 case_10  Death   m         20 Shanghai date_outcome         2013-04-03
+##  7 case_100 &lt;NA&gt;    m         30 Zhejiang date_onset           2013-04-16
+##  8 case_100 &lt;NA&gt;    m         30 Zhejiang date_hospitalization NA        
+##  9 case_100 &lt;NA&gt;    m         30 Zhejiang date_outcome         NA        
+## 10 case_101 &lt;NA&gt;    f         51 Zhejiang date_onset           2013-04-13
 ## # ... with 392 more rows</code></pre>
 <p>Now that we have this, let’s visualize the number of days that passed between onset, hospitalization and outcome, for each case. We see that there are lots of unconnected points, especially in Jiangsu and Zhejiang provinces, where one of these dates isn’t known.</p>
 <pre class="r"><code>ggplot(flugather, aes(date, y=age, color=outcome)) +
@@ -689,17 +633,17 @@ flu &lt;- flu %&gt;%
 flu</code></pre>
 <pre><code>## # A tibble: 134 x 9
 ##    case_id outcome   age province  male hospital days_to_hospital
-##      &lt;chr&gt;   &lt;chr&gt; &lt;int&gt;    &lt;chr&gt; &lt;int&gt;    &lt;int&gt;            &lt;dbl&gt;
-##  1  case_1   Death    58 Shanghai     1        0               NA
-##  2  case_2   Death     7 Shanghai     1        1                4
-##  3  case_3   Death    11    Other     0        1               10
-##  4  case_4    &lt;NA&gt;    18  Jiangsu     0        1                8
-##  5  case_5 Recover    20  Jiangsu     0        1               11
-##  6  case_6   Death     9  Jiangsu     0        1                7
-##  7  case_7   Death    54  Jiangsu     1        1                9
-##  8  case_8   Death    14 Zhejiang     1        1               11
-##  9  case_9    &lt;NA&gt;    39 Zhejiang     1        1                0
-## 10 case_10   Death    20 Shanghai     1        1                4
+##    &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;    &lt;int&gt;    &lt;int&gt;            &lt;dbl&gt;
+##  1 case_1  Death      58 Shanghai     1        0            NA   
+##  2 case_2  Death       7 Shanghai     1        1             4.00
+##  3 case_3  Death      11 Other        0        1            10.0 
+##  4 case_4  &lt;NA&gt;       18 Jiangsu      0        1             8.00
+##  5 case_5  Recover    20 Jiangsu      0        1            11.0 
+##  6 case_6  Death       9 Jiangsu      0        1             7.00
+##  7 case_7  Death      54 Jiangsu      1        1             9.00
+##  8 case_8  Death      14 Zhejiang     1        1            11.0 
+##  9 case_9  &lt;NA&gt;       39 Zhejiang     1        1             0   
+## 10 case_10 Death      20 Shanghai     1        1             4.00
 ## # ... with 124 more rows, and 2 more variables: days_to_outcome &lt;dbl&gt;,
 ## #   early_outcome &lt;int&gt;</code></pre>
 </div>
@@ -717,17 +661,17 @@ flu</code></pre>
 flu</code></pre>
 <pre><code>## # A tibble: 134 x 12
 ##    case_id outcome   age  male hospital days_to_hospital days_to_outcome
-##  *   &lt;chr&gt;   &lt;chr&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;            &lt;dbl&gt;           &lt;dbl&gt;
-##  1  case_1   Death    58     1        0               NA              13
-##  2  case_2   Death     7     1        1                4              11
-##  3  case_3   Death    11     0        1               10              31
-##  4  case_4    &lt;NA&gt;    18     0        1                8              NA
-##  5  case_5 Recover    20     0        1               11              57
-##  6  case_6   Death     9     0        1                7              36
-##  7  case_7   Death    54     1        1                9              20
-##  8  case_8   Death    14     1        1               11              20
-##  9  case_9    &lt;NA&gt;    39     1        1                0              NA
-## 10 case_10   Death    20     1        1                4               6
+##  * &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;int&gt;    &lt;int&gt;            &lt;dbl&gt;           &lt;dbl&gt;
+##  1 case_1  Death      58     1        0            NA              13.0 
+##  2 case_2  Death       7     1        1             4.00           11.0 
+##  3 case_3  Death      11     0        1            10.0            31.0 
+##  4 case_4  &lt;NA&gt;       18     0        1             8.00           NA   
+##  5 case_5  Recover    20     0        1            11.0            57.0 
+##  6 case_6  Death       9     0        1             7.00           36.0 
+##  7 case_7  Death      54     1        1             9.00           20.0 
+##  8 case_8  Death      14     1        1            11.0            20.0 
+##  9 case_9  &lt;NA&gt;       39     1        1             0              NA   
+## 10 case_10 Death      20     1        1             4.00            6.00
 ## # ... with 124 more rows, and 5 more variables: early_outcome &lt;int&gt;,
 ## #   provinceJiangsu &lt;dbl&gt;, provinceOther &lt;dbl&gt;, provinceShanghai &lt;dbl&gt;,
 ## #   provinceZhejiang &lt;dbl&gt;</code></pre>
@@ -757,17 +701,17 @@ flu</code></pre>
 flu</code></pre>
 <pre><code>## # A tibble: 134 x 12
 ##    case_id outcome   age  male hospital days_to_hospital days_to_outcome
-##  *   &lt;chr&gt;   &lt;chr&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;            &lt;dbl&gt;           &lt;dbl&gt;
-##  1  case_1   Death    58     1        0               NA              13
-##  2  case_2   Death     7     1        1                4              11
-##  3  case_3   Death    11     0        1               10              31
-##  4  case_4    &lt;NA&gt;    18     0        1                8              NA
-##  5  case_5 Recover    20     0        1               11              57
-##  6  case_6   Death     9     0        1                7              36
-##  7  case_7   Death    54     1        1                9              20
-##  8  case_8   Death    14     1        1               11              20
-##  9  case_9    &lt;NA&gt;    39     1        1                0              NA
-## 10 case_10   Death    20     1        1                4               6
+##  * &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;int&gt;    &lt;int&gt;            &lt;dbl&gt;           &lt;dbl&gt;
+##  1 case_1  Death      58     1        0            NA              13.0 
+##  2 case_2  Death       7     1        1             4.00           11.0 
+##  3 case_3  Death      11     0        1            10.0            31.0 
+##  4 case_4  &lt;NA&gt;       18     0        1             8.00           NA   
+##  5 case_5  Recover    20     0        1            11.0            57.0 
+##  6 case_6  Death       9     0        1             7.00           36.0 
+##  7 case_7  Death      54     1        1             9.00           20.0 
+##  8 case_8  Death      14     1        1            11.0            20.0 
+##  9 case_9  &lt;NA&gt;       39     1        1             0              NA   
+## 10 case_10 Death      20     1        1             4.00            6.00
 ## # ... with 124 more rows, and 5 more variables: early_outcome &lt;int&gt;,
 ## #   Jiangsu &lt;dbl&gt;, Other &lt;dbl&gt;, Shanghai &lt;dbl&gt;, Zhejiang &lt;dbl&gt;</code></pre>
 <p>Eventually we want to predict the outcome, so we don’t want to factor that into the imputation. We also don’t want to factor in the case ID, because that’s just an individual’s identifier. So let’s create a new dataset selecting out those two variables so we can try to impute everything else.</p>
@@ -789,17 +733,17 @@ fluimp &lt;- flu %&gt;%
 fluimp</code></pre>
 <pre><code>## # A tibble: 134 x 12
 ##    case_id outcome   age  male hospital days_to_hospital days_to_outcome
-##  *   &lt;chr&gt;   &lt;chr&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;            &lt;dbl&gt;           &lt;dbl&gt;
-##  1  case_1   Death    58     1        0                4              13
-##  2  case_2   Death     7     1        1                4              11
-##  3  case_3   Death    11     0        1               10              31
-##  4  case_4    &lt;NA&gt;    18     0        1                8              46
-##  5  case_5 Recover    20     0        1               11              57
-##  6  case_6   Death     9     0        1                7              36
-##  7  case_7   Death    54     1        1                9              20
-##  8  case_8   Death    14     1        1               11              20
-##  9  case_9    &lt;NA&gt;    39     1        1                0              18
-## 10 case_10   Death    20     1        1                4               6
+##  * &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;int&gt;    &lt;int&gt;            &lt;dbl&gt;           &lt;dbl&gt;
+##  1 case_1  Death      58     1        0             4.00           13.0 
+##  2 case_2  Death       7     1        1             4.00           11.0 
+##  3 case_3  Death      11     0        1            10.0            31.0 
+##  4 case_4  &lt;NA&gt;       18     0        1             8.00           46.0 
+##  5 case_5  Recover    20     0        1            11.0            57.0 
+##  6 case_6  Death       9     0        1             7.00           36.0 
+##  7 case_7  Death      54     1        1             9.00           20.0 
+##  8 case_8  Death      14     1        1            11.0            20.0 
+##  9 case_9  &lt;NA&gt;       39     1        1             0              18.0 
+## 10 case_10 Death      20     1        1             4.00            6.00
 ## # ... with 124 more rows, and 5 more variables: early_outcome &lt;int&gt;,
 ## #   Jiangsu &lt;dbl&gt;, Other &lt;dbl&gt;, Shanghai &lt;dbl&gt;, Zhejiang &lt;dbl&gt;</code></pre>
 <p>At this point we’re almost ready to do some predictive modeling! If you didn’t make it this far and you just want to read in the analysis ready dataset, you can do that too.</p>
@@ -898,7 +842,7 @@ modrf</code></pre>
 ##    6    0.706     0.390
 ##   10    0.703     0.388
 ## 
-## Accuracy was used to select the optimal model using  the largest value.
+## Accuracy was used to select the optimal model using the largest value.
 ## The final value used for the model was mtry = 6.</code></pre>
 <p>Take a look at what that tells us. It tells us it’s fitting a Random Forest model using 77 samples, predicting a categorical outcome class (Death or Recover) based on 10 predictors. It’s not doing any pre-processing like centering or scaling, and it’s doing bootstrap resampling of 77 samples with replacement, repeated 25 times each. Random Forest has a single tuning parameter, <span class="math inline">\(m_{\text{try}}\)</span> – the algorithm will select <span class="math inline">\(m_{\text{try}}\)</span> number of predictors to attempt a split for classification when building a classification tree. The caret package does 25 bootstrap resamples for different values of <span class="math inline">\(m_{\text{try}}\)</span> (you can also control this too if you want), and computes <a href="https://en.wikipedia.org/wiki/Sensitivity_and_specificity#Confusion_matrix">accuracy</a> and <a href="https://en.wikipedia.org/wiki/Cohen%27s_kappa">kappa</a> measures of performance on the held-out samples.</p>
 <p>Accuracy is the number of true assignments to the correct class divided by the total number of samples. <a href="https://en.wikipedia.org/wiki/Cohen%27s_kappa">Kappa</a> takes into account the expected accuracy while considering chance agreement, and is useful for extremely imbalanced class distributions. For continuous outcomes, you can measure things like RMSE or correlation coefficients.</p>
@@ -964,7 +908,7 @@ modgbm</code></pre>
 ## Tuning parameter &#39;shrinkage&#39; was held constant at a value of 0.1
 ## 
 ## Tuning parameter &#39;n.minobsinnode&#39; was held constant at a value of 10
-## Accuracy was used to select the optimal model using  the largest value.
+## Accuracy was used to select the optimal model using the largest value.
 ## The final values used for the model were n.trees = 100,
 ##  interaction.depth = 3, shrinkage = 0.1 and n.minobsinnode = 10.</code></pre>
 <p>Notice how stochastic gradient boosting has two different tuning parameters - interaction depth and n trees. There were others (shrinkage, and <code>n.minobsinnode</code>) that were held constant. The caret package automates the bootstrap resampling based performance assessment across all combinations of depth and ntrees, and it tells you where you got the best performance. Notice that the performance here doesn’t seem to be as good as random forest. We can also look at variable importance here too, and see similar rankings.</p>
@@ -1023,7 +967,7 @@ modglmnet</code></pre>
 ##   1.00   0.003908  0.592     0.162
 ##   1.00   0.039077  0.629     0.225
 ## 
-## Accuracy was used to select the optimal model using  the largest value.
+## Accuracy was used to select the optimal model using the largest value.
 ## The final values used for the model were alpha = 1 and lambda = 0.0391.</code></pre>
 </div>
 <div id="k-nearest-neighbor" class="section level4">
@@ -1051,7 +995,7 @@ modknn</code></pre>
 ## Tuning parameter &#39;distance&#39; was held constant at a value of 2
 ## 
 ## Tuning parameter &#39;kernel&#39; was held constant at a value of optimal
-## Accuracy was used to select the optimal model using  the largest value.
+## Accuracy was used to select the optimal model using the largest value.
 ## The final values used for the model were kmax = 9, distance = 2 and
 ##  kernel = optimal.</code></pre>
 </div>
@@ -1071,14 +1015,14 @@ summary(modsum)</code></pre>
 ##         Min. 1st Qu. Median  Mean 3rd Qu.  Max. NA&#39;s
 ## gbm    0.500   0.594  0.645 0.647   0.714 0.793    0
 ## rf     0.517   0.636  0.714 0.706   0.793 0.867    0
-## glmnet 0.440   0.606  0.636 0.638   0.655 0.905    0
+## glmnet 0.444   0.571  0.625 0.629   0.682 0.767    0
 ## knn    0.545   0.588  0.621 0.634   0.679 0.821    0
 ## 
 ## Kappa 
 ##           Min. 1st Qu. Median  Mean 3rd Qu.  Max. NA&#39;s
 ## gbm     0.0249   0.152  0.220 0.272   0.404 0.574    0
 ## rf      0.0000   0.255  0.378 0.390   0.578 0.724    0
-## glmnet -0.0736   0.182  0.240 0.247   0.286 0.738    0
+## glmnet -0.1345   0.125  0.212 0.225   0.353 0.507    0
 ## knn     0.0667   0.152  0.216 0.242   0.322 0.578    0</code></pre>
 <p>The <code>bwplot()</code> function can take this model summary object and visualize it.</p>
 <pre class="r"><code>bwplot(modsum)</code></pre>
@@ -1105,16 +1049,16 @@ summary(modsum)</code></pre>
   mutate(outcome=predict(modrf, newdata=unknown))</code></pre>
 <pre><code>## # A tibble: 57 x 12
 ##    case_id outcome   age  male hospital days_to_hospital days_to_outcome
-##      &lt;chr&gt;  &lt;fctr&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;            &lt;int&gt;           &lt;int&gt;
-##  1  case_4 Recover    18     0        1                8              46
-##  2  case_9 Recover    39     1        1                0              18
-##  3 case_15   Death    34     0        0               11              38
+##    &lt;chr&gt;   &lt;fct&gt;   &lt;int&gt; &lt;int&gt;    &lt;int&gt;            &lt;int&gt;           &lt;int&gt;
+##  1 case_4  Recover    18     0        1                8              46
+##  2 case_9  Recover    39     1        1                0              18
+##  3 case_15 Death      34     0        0               11              38
 ##  4 case_16 Recover    51     1        0                3              20
-##  5 case_22   Death    56     1        1                4              17
-##  6 case_28   Death    51     1        0                6               6
+##  5 case_22 Death      56     1        1                4              17
+##  6 case_28 Death      51     1        0                6               6
 ##  7 case_31 Recover    43     1        0                4              21
 ##  8 case_32 Recover    46     1        0                3              20
-##  9 case_38   Death    28     1        0                2               7
+##  9 case_38 Death      28     1        0                2               7
 ## 10 case_39 Recover    38     1        1                0              18
 ## # ... with 47 more rows, and 5 more variables: early_outcome &lt;int&gt;,
 ## #   Jiangsu &lt;int&gt;, Other &lt;int&gt;, Shanghai &lt;int&gt;, Zhejiang &lt;int&gt;</code></pre>
@@ -1189,7 +1133,7 @@ ili &lt;- read_csv(&quot;data/ilinet.csv&quot;)
 ili</code></pre>
 <pre><code>## # A tibble: 772 x 6
 ##    week_start ilitotal total_patients fludeaths pneumoniadeaths all_deaths
-##        &lt;date&gt;    &lt;int&gt;          &lt;dbl&gt;     &lt;int&gt;           &lt;dbl&gt;      &lt;dbl&gt;
+##    &lt;date&gt;        &lt;int&gt;          &lt;dbl&gt;     &lt;int&gt;           &lt;dbl&gt;      &lt;dbl&gt;
 ##  1 2003-01-06     3260         171193        NA              NA         NA
 ##  2 2003-01-13     3729         234513        NA              NA         NA
 ##  3 2003-01-20     4204         231550        NA              NA         NA
@@ -1205,7 +1149,7 @@ ili</code></pre>
 <pre class="r"><code>tail(ili)</code></pre>
 <pre><code>## # A tibble: 6 x 6
 ##   week_start ilitotal total_patients fludeaths pneumoniadeaths all_deaths
-##       &lt;date&gt;    &lt;int&gt;          &lt;dbl&gt;     &lt;int&gt;           &lt;dbl&gt;      &lt;dbl&gt;
+##   &lt;date&gt;        &lt;int&gt;          &lt;dbl&gt;     &lt;int&gt;           &lt;dbl&gt;      &lt;dbl&gt;
 ## 1 2017-09-25     9065         730058        18            2582      46334
 ## 2 2017-10-02    11970         959420        13            2594      45429
 ## 3 2017-10-09    12429         943839        15            2480      43237

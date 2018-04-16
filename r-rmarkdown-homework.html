@@ -299,7 +299,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">BIMS8382</a>
+      <a class="navbar-brand" href="index.html">BIMS 8382 Spring 2018</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -323,62 +323,6 @@ div.tocify {
      
     Data
   </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-book"></span>
-     
-    Workshops
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="r-basics.html">R Basics</a>
-    </li>
-    <li>
-      <a href="r-dataframes.html">Data Frames</a>
-    </li>
-    <li>
-      <a href="r-dplyr-yeast.html">Data Manipulation</a>
-    </li>
-    <li>
-      <a href="r-tidy.html">Tidying data</a>
-    </li>
-    <li>
-      <a href="r-lists.html">List Manipulation</a>
-    </li>
-    <li>
-      <a href="r-interactive-viz.html">Interactive Visualization with JavaScript and R</a>
-    </li>
-    <li>
-      <a href="r-shiny.html">Building Shiny Web Apps in R</a>
-    </li>
-    <li>
-      <a href="r-ncbi.html">Harvesting Data from NCBI</a>
-    </li>
-    <li>
-      <a href="r-viz-gapminder.html">Data Visualization</a>
-    </li>
-    <li>
-      <a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a>
-    </li>
-    <li>
-      <a href="r-stats.html">Essential Statistics with R</a>
-    </li>
-    <li>
-      <a href="r-survival.html">Survival Analysis with TCGA Data</a>
-    </li>
-    <li>
-      <a href="r-ggtree.html">Drawing &amp; annotating phylogenetic trees</a>
-    </li>
-    <li>
-      <a href="r-rnaseq-airway.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
-    </li>
-  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -423,6 +367,9 @@ div.tocify {
     <li>
       <a href="r-rnaseq-airway.html">RNA-Seq Data Analysis</a>
     </li>
+    <li>
+      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">--- Homework ---</li>
     <li>
@@ -439,9 +386,6 @@ div.tocify {
     </li>
     <li>
       <a href="r-rnaseq-homework.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
     </li>
   </ul>
 </li>
@@ -462,7 +406,7 @@ div.tocify {
       <a href="help.html">Further resources</a>
     </li>
     <li>
-      <a href="https://github.com/bioconnector/workshops">Source code for this site</a>
+      <a href="https://github.com/bims8382/2018">Source code for this site</a>
     </li>
   </ul>
 </li>
@@ -497,7 +441,7 @@ div.tocify {
 <hr />
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This data is a tidy version of a gene expression dataset from <a href="http://www.ncbi.nlm.nih.gov/pubmed/17959824">Brauer et al. Coordination of Growth Rate, Cell Cycle, Stress Response, and Metabolic Activity in Yeast (2008) <em>Mol Biol Cell</em> 19:352-367</a>. This data is from a gene expression microarray, and in this paper the authors are examining the relationship between growth rate and gene expression in yeast cultures limited by one of six different nutrients (glucose, leucine, ammonium, sulfate, phosphate, uracil). If you give yeast a rich media loaded with nutrients except restrict the supply of a <em>single</em> nutrient, you can control the growth rate to any rate you choose. By starving yeast of specific nutrients you can find genes that:</p>
+<p>This data is a tidy version of a gene expression dataset from <a href="http://www.ncbi.nlm.nih.gov/pubmed/17959824">Brauer et al. Coordination of Growth Rate, Cell Cycle, Stress Response, and Metabolic Activity in Yeast (2008) <em>Mol Biol Cell</em> 19:352-367</a>. This data is from a gene expression microarray, and in this paper the authors are examining the relationship between growth rate and gene expression in yeast cultures limited by one of six different nutrients (glucose, leucine, ammonium, sulfate, phosphate, uracil). If you give yeast a rich media loaded with nutrients except restrict the supply of a <em>single</em> nutrient, you can control the growth rate to any rate you choose. By starving yeast of specific nutrients you can find genes that:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Raise or lower their expression in response to growth rate</strong>. Growth-rate dependent expression patterns can tell us a lot about cell cycle control, and how the cell responds to stress. The authors found that expression of &gt;25% of all yeast genes is linearly correlated with growth rate, independent of the limiting nutrient. They also found that the subset of negatively growth-correlated genes is enriched for peroxisomal functions, and positively correlated genes mainly encode ribosomal functions.</li>
 <li><strong>Respond differently when different nutrients are being limited</strong>. If you see particular genes that respond very differently when a nutrient is sharply restricted, these genes might be involved in the transport or metabolism of that specific nutrient.</li>
@@ -526,28 +470,28 @@ ydat &lt;- read_csv(&quot;data/brauer2007_tidy.csv&quot;)</code></pre>
   arrange(desc(n)) %&gt;% 
   head(20)</code></pre>
 <pre><code>## # A tibble: 20 x 2
-##                                                              bp     n
-##                                                           &lt;chr&gt; &lt;int&gt;
-##  1                                   biological process unknown   269
-##  2                                         protein biosynthesis   182
-##  3                          protein amino acid phosphorylation*    78
-##  4                                        protein biosynthesis*    73
-##  5                       cell wall organization and biogenesis*    64
+##    bp                                                               n
+##    &lt;chr&gt;                                                        &lt;int&gt;
+##  1 biological process unknown                                     269
+##  2 protein biosynthesis                                           182
+##  3 protein amino acid phosphorylation*                             78
+##  4 protein biosynthesis*                                           73
+##  5 cell wall organization and biogenesis*                          64
 ##  6 regulation of transcription from RNA polymerase II promoter*    49
-##  7                       nuclear mRNA splicing, via spliceosome    47
-##  8                                                  DNA repair*    44
-##  9                                         aerobic respiration*    42
-## 10                                       ER to Golgi transport*    42
-## 11                                                 endocytosis*    41
-## 12                                         mRNA-nucleus export*    41
-## 13                                          response to stress*    39
-## 14                                  protein-vacuolar targeting*    37
-## 15                        cell wall organization and biogenesis    36
-## 16                                             rRNA processing*    35
-## 17                       ubiquitin-dependent protein catabolism    35
-## 18                                        ER to Golgi transport    33
-## 19                           35S primary transcript processing*    30
-## 20                             chromatin silencing at telomere*    29</code></pre>
+##  7 nuclear mRNA splicing, via spliceosome                          47
+##  8 DNA repair*                                                     44
+##  9 aerobic respiration*                                            42
+## 10 ER to Golgi transport*                                          42
+## 11 endocytosis*                                                    41
+## 12 mRNA-nucleus export*                                            41
+## 13 response to stress*                                             39
+## 14 protein-vacuolar targeting*                                     37
+## 15 cell wall organization and biogenesis                           36
+## 16 rRNA processing*                                                35
+## 17 ubiquitin-dependent protein catabolism                          35
+## 18 ER to Golgi transport                                           33
+## 19 35S primary transcript processing*                              30
+## 20 chromatin silencing at telomere*                                29</code></pre>
 </div>
 <div id="visualize-genes-in-a-particular-biological-process" class="section level3">
 <h3>Visualize genes in a particular biological process</h3>

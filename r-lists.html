@@ -299,7 +299,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">BIMS8382</a>
+      <a class="navbar-brand" href="index.html">BIMS 8382 Spring 2018</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -323,62 +323,6 @@ div.tocify {
      
     Data
   </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-book"></span>
-     
-    Workshops
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="r-basics.html">R Basics</a>
-    </li>
-    <li>
-      <a href="r-dataframes.html">Data Frames</a>
-    </li>
-    <li>
-      <a href="r-dplyr-yeast.html">Data Manipulation</a>
-    </li>
-    <li>
-      <a href="r-tidy.html">Tidying data</a>
-    </li>
-    <li>
-      <a href="r-lists.html">List Manipulation</a>
-    </li>
-    <li>
-      <a href="r-interactive-viz.html">Interactive Visualization with JavaScript and R</a>
-    </li>
-    <li>
-      <a href="r-shiny.html">Building Shiny Web Apps in R</a>
-    </li>
-    <li>
-      <a href="r-ncbi.html">Harvesting Data from NCBI</a>
-    </li>
-    <li>
-      <a href="r-viz-gapminder.html">Data Visualization</a>
-    </li>
-    <li>
-      <a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a>
-    </li>
-    <li>
-      <a href="r-stats.html">Essential Statistics with R</a>
-    </li>
-    <li>
-      <a href="r-survival.html">Survival Analysis with TCGA Data</a>
-    </li>
-    <li>
-      <a href="r-ggtree.html">Drawing &amp; annotating phylogenetic trees</a>
-    </li>
-    <li>
-      <a href="r-rnaseq-airway.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
-    </li>
-  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -423,6 +367,9 @@ div.tocify {
     <li>
       <a href="r-rnaseq-airway.html">RNA-Seq Data Analysis</a>
     </li>
+    <li>
+      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">--- Homework ---</li>
     <li>
@@ -439,9 +386,6 @@ div.tocify {
     </li>
     <li>
       <a href="r-rnaseq-homework.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
     </li>
   </ul>
 </li>
@@ -462,7 +406,7 @@ div.tocify {
       <a href="help.html">Further resources</a>
     </li>
     <li>
-      <a href="https://github.com/bioconnector/workshops">Source code for this site</a>
+      <a href="https://github.com/bims8382/2018">Source code for this site</a>
     </li>
   </ul>
 </li>
@@ -485,7 +429,7 @@ div.tocify {
 <h2>Introduction</h2>
 <p>Compared to the data frame, vector and matrix, the list is under-represented in many introductory R tutorials. This likely has less do with the relative importance of lists, and more to do with their potential complexity. However, an understanding of how to create, curate and manipulate objects of this type can prove immensely useful.</p>
 <p>The list is one of the most versatile data types in R thanks to its ability to accommodate heterogenous elements. A single list can contain multiple elements, regardless of their types or whether these elements contain further nested data. So you can have a list of a list of a list of a list of a list …</p>
-<p>Garrett Grolemund and Hadley Wickham’s <strong>R For Data Science</strong> includes a section on lists. They use a helpful simile for the list as a shaker filled with packets of pepper<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. To retrieve individual “grains” of pepper, you’d have to first access the shaker … then the packet inside the shaker … then the pepper inside the packet.</p>
+<p>Garrett Grolemund and Hadley Wickham’s <strong>R For Data Science</strong> includes a section on lists. They use a helpful simile for the list as a shaker filled with packets of pepper<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. To retrieve individual “grains” of pepper, you’d have to first access the shaker … then the packet inside the shaker … then the pepper inside the packet.</p>
 <p>Still confused? Here’s another way of thinking about it: the list is like a movie. Each movie has a cast, crew, budget, script, etc. These elements may have different dimensions (more cast members than crew) and be of different types (budget is a number, script is a series of characters), yet they are all part of the same movie.</p>
 <p>We’ll use a brief review of R basics as a vehicle to get started with lists.</p>
 </div>
@@ -699,7 +643,7 @@ slamwins</code></pre>
 ## 
 ## $Borg$Total
 ## [1] 11</code></pre>
-<p>There are a couple of potential issues with this code. The main thing is that we need to know what the totals are ahead of time. It would be a lot better to calculate those <em>dynamically</em> in case our underlying data changes … or in case we’re performing a calculation that’s not as simple as a sum. Another problem with this approach is that it’s implemented with a for loop, which is a construct that works when programming R but can be problematic<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
+<p>There are a couple of potential issues with this code. The main thing is that we need to know what the totals are ahead of time. It would be a lot better to calculate those <em>dynamically</em> in case our underlying data changes … or in case we’re performing a calculation that’s not as simple as a sum. Another problem with this approach is that it’s implemented with a for loop, which is a construct that works when programming R but can be problematic<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
 <p>Enter the “apply” functions …</p>
 <p>For this lesson, the two most relevant members of this family of functions are <code>lapply()</code> and <code>sapply()</code>, both of which allow you to pass <em>other</em> functions to each element of a list.</p>
 <p>Before we start working with these functions, we need to restore our list the state it was in before we ran the loop to add the sums for each element. Assigning an element as <code>NULL</code> effectively deletes that element from the list.</p>
@@ -746,7 +690,7 @@ slamwins</code></pre>
 ## 
 ## $Borg
 ## [1] 11</code></pre>
-<p>Now that we’ve figured out how to calculate the values we’re interested in, we just need to append them to the original list. One of the keys here is appreciating that <code>lapply()</code> can take any function (including one that we write … an “anonymous function”<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>) and use that operation on each element in the list. Another point worth noting is that the <code>c()</code> function works on lists. Most introduction to R tutorials include examples of using <code>c()</code> to create a vector, and it works very similarly for lists. Essentially it appends either a single item or a list of items onto the list.</p>
+<p>Now that we’ve figured out how to calculate the values we’re interested in, we just need to append them to the original list. One of the keys here is appreciating that <code>lapply()</code> can take any function (including one that we write … an “anonymous function”<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>) and use that operation on each element in the list. Another point worth noting is that the <code>c()</code> function works on lists. Most introduction to R tutorials include examples of using <code>c()</code> to create a vector, and it works very similarly for lists. Essentially it appends either a single item or a list of items onto the list.</p>
 <pre class="r"><code>slamwins &lt;- lapply(lapply(slamwins, unlist), function(x) c(x, Total = sum(x)))
 slamwins</code></pre>
 <pre><code>## $Federer
@@ -792,7 +736,7 @@ datdf</code></pre>
 </div>
 <div id="lists-in-the-wild" class="section level2">
 <h2>Lists “In The Wild”</h2>
-<p>The above is a contrived example. In practice, you’re much more likely to encounter lists written by other people (or applications) than to code out a list of your own. The example data we’ll use will be pulled from an Application Programming Interface (API) for the <a href="http://www.github.com">github.com</a> website<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>. Like many other wep APIs, the data comes out in JavaScript Object Notation (JSON). JSON is a format for storing and transmitting “semi-structured” data<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>. Keys and values are paired together to facilitate parsing<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>. When read into R, JSON is interpreted as a list.</p>
+<p>The above is a contrived example. In practice, you’re much more likely to encounter lists written by other people (or applications) than to code out a list of your own. The example data we’ll use will be pulled from an Application Programming Interface (API) for the <a href="http://www.github.com">github.com</a> website<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. Like many other wep APIs, the data comes out in JavaScript Object Notation (JSON). JSON is a format for storing and transmitting “semi-structured” data<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Keys and values are paired together to facilitate parsing<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. When read into R, JSON is interpreted as a list.</p>
 <div id="example" class="section level3">
 <h3>Example</h3>
 <p>Github is a platform for sharing, storing and managing code. Projects can be defined in a “repository” structure. The example that follows will look at repositories for a single user: Hadley Wickham.</p>
@@ -997,7 +941,7 @@ rm(had1, had2)</code></pre>
 ## [1] &quot;2015-08-09T03:22:26Z&quot;
 ## 
 ## $updated_at
-## [1] &quot;2017-05-03T02:53:29Z&quot;
+## [1] &quot;2017-10-28T16:15:38Z&quot;
 ## 
 ## $pushed_at
 ## [1] &quot;2015-08-10T20:29:10Z&quot;
@@ -1050,8 +994,14 @@ rm(had1, had2)</code></pre>
 ## $mirror_url
 ## NULL
 ## 
+## $archived
+## [1] FALSE
+## 
 ## $open_issues_count
 ## [1] 0
+## 
+## $license
+## NULL
 ## 
 ## $forks
 ## [1] 7
@@ -1070,158 +1020,224 @@ rm(had1, had2)</code></pre>
 <pre><code>## [1] &quot;Python&quot;</code></pre>
 <p>We mentioned <code>sapply()</code> above, and now we can put it into action. This function will be useful in extracting the same child elements from different parents. To do so, we’ll need to define an anonymous function to apply across the list. Note that <em><code>sapply()</code> is similar to <code>lapply()</code> but always returns a vector, matrix or array rather than a list</em>.</p>
 <pre class="r"><code>sapply(had, function(x) x$watchers)</code></pre>
-<pre><code>##   [1]   24   13    0 1030    5   82   59   10    4  260    5   13    6    1
-##  [15]    0    8   12    1    0   15    6    6    5   35  117   21   22    4
-##  [29]   44  146    2    0   45    7 1545    5    3   17    1    0    1   91
-##  [43]    6  128    1    4   11    3    6   16    3   61    3    3    3   14
-##  [57]    8  407    5    4   72    7   26    3    8    9    0    6   28    3
-##  [71]    5    2    2    0   11    2    1   12    8   79    0    3    4   92
-##  [85]    3    0   32    6   23   10    5    2   11    8    0   41   14  287
-##  [99]   10    3    9   28   41    3   39    4    0  260  469    4   64    6
-## [113]   22   30    9  126   58    6    3   98   31  183   55    2    6    2
-## [127]  178  906    8    6    4    1    1    0    5    1    0    4    1   30
-## [141]    1   21    3   14    0  159    5    6   10    0    1    1   13    4
-## [155]   22   28    1   10    7  846    2    0    8   90   91   31    0    3
-## [169]   22    0   14   26    5    1    4    7    3    5  128    1    2    6
-## [183]  195    7    2    1   23   19    1   27    5    8    1    1    0    4
-## [197]    0    8    6    0</code></pre>
+<pre><code>##   [1]   24   14    0 1164    5   92   65   10    4  266    5   16    8    1
+##  [15]   59    0    8   12    1    0   15    6    6    8   37    0    0  125
+##  [29]   21   26    4   45  166   23    2    1   48    7    5    3   17    1
+##  [43]    0    0    1  105    9  153    1    4   13    5    6   15    3   63
+##  [57]    4    4    3   15    9  479    6    4   73   10    5   28    3    5
+##  [71]    8   10    0    7   28    3    5    2    2    0   10    2    1   14
+##  [85]    8   82    1    3    4   93    3    0    6   28   11    6    2   11
+##  [99]    7    0   42   15  320   10    3    9   30   51    3   39    4    0
+## [113]  469    4   64    6   28   30   10  143   68    6    3  116   33  227
+## [127]   59    2    6    1  179 1243    8    6    4    1    1    0    4    1
+## [141]    0    4    1   31    1   25    3   14    0  172    5    5   10    0
+## [155]    1    1   13    5   22   30    2   11    8  915    2    0    8  103
+## [169]   96   31    0    3   23    0   14   33    5    1    4    7    3    5
+## [183] 1065  151    1    2    7  223    7    2    2   25   23    1   27    6
+## [197]    8    2    1    0</code></pre>
 <p>We’ve successfully extracted the child element of interest from each of the parent elements in the list. However, this vector could be hard to interpret since the elements are divorced from the larger context. One solution might be to assign names to the original list, which will give <code>sapply()</code> a named vector output.</p>
 <pre class="r"><code>names(had) &lt;- sapply(had, function(x) x$name)
 sapply(had, function(x) x$watchers)</code></pre>
-<pre><code>##  15-state-of-the-union      15-student-papers               500lines 
-##                     24                     13                      0 
-##                  adv-r                appdirs             assertthat 
-##                   1030                      5                     82 
-##              babynames         beautiful-data                  bench 
-##                     59                     10                      4 
-##                 bigvis         bigvis-infovis         boxplots-paper 
-##                    260                      5                     13 
-##                  broom                builder             cellranger 
-##                      6                      1                      0 
-##              classifly             clusterfly       cocktail-balance 
-##                      8                     12                      1 
-##             commonmark         cran-downloads        cran-logs-dplyr 
-##                      0                     15                      6 
-##          cran-packages              cranatics             crantastic 
-##                      6                      5                     35 
-##        data-baby-names          data-counties      data-fuel-economy 
-##                    117                     21                     22 
-##               data-gbd    data-housing-crisis            data-movies 
-##                      4                     44                    146 
-##            data-stride               datafest                decumar 
-##                      2                      0                     45 
-##             densityvis               devtools           directlabels 
-##                      7                   1545                      5 
-##              distpower                 docker                   docs 
-##                      3                     17                      1 
-##          dplyrimpaladb                   drat                 dtplyr 
-##                      0                      1                     91 
-##                eggnogr                    emo              example-r 
-##                      6                    128                      1 
-##              extrafont              fec-dplyr        fivethirtyeight 
-##                      4                     11                      3 
-##                fortify            fueleconomy                gdtools 
-##                      6                     16                      3 
-##                   gg2v             ggenealogy                  ggmap 
-##                     61                      3                      3 
-##                 ggplot                ggplot1        ggplot2-bayarea 
-##                      3                     14                      8 
-##           ggplot2-book           ggplot2-docs          ggplot2movies 
-##                    407                      5                      4 
-##                 ggstat               ggthemes                 gtable 
-##                     72                      7                     26 
-##              gun-sales              hadladdin      hadley.github.com 
-##                      3                      8                      9 
-##              hclpicker      healthyr_preamble                  helpr 
-##                      0                      6                     28 
-##     herndon-ash-pollin               hflights      highlighting-kate 
-##                      3                      5                      2 
-##                httpbin                 httpuv                  ideas 
-##                      2                      0                     11 
-##              imvisoned                 kmeans                   l1tf 
-##                      2                      1                     12 
-##                 layers               lazyeval                leaflet 
-##                      8                     79                      0 
-##          leaflet-shiny                legends               lineprof 
-##                      3                      4                     92 
-##                 linval                   lme4                 lobstr 
-##                      3                      0                     32 
-##               localmds                 lvplot           lvplot-paper 
-##                      6                     23                     10 
-##          maplight-data      markdown-licenses                 meifly 
-##                      5                      2                     11 
-##       mexico-mortality                minimal                 monads 
-##                      8                      0                     41 
-##                 mturkr             multidplyr                 mutatr 
-##                     14                    287                     10 
-##              mutatrGui            nasaweather                  neiss 
-##                      3                      9                     28 
-##           nycflights13               olctools            oldbookdown 
-##                     41                      3                     39 
-##                packman               PivotalR                pkgdown 
-##                      4                      0                    260 
-##                   plyr              pop-flows                 precis 
-##                    469                      4                     64 
-##          prodplotpaper           productplots                  profr 
-##                      6                     22                     30 
-##                  proto                   pryr               purrrlyr 
-##                      9                    126                     58 
-##          qtpaint-demos      r-devel-san-clang            r-internals 
-##                      6                      3                     98 
-##            r-on-github                 r-pkgs               r-python 
-##                     31                    183                     55 
-##               r-source               r-travis                 r-yaml 
-##                      2                      6                      2 
-##                   r2d3                   r4ds    ranking-correlation 
-##                    178                    906                      8 
-##              rastermap                rblocks                Rcereal 
-##                      6                      4                      1 
-##                   Rcpp           rcpp-gallery           RcppDateTime 
-##                      1                      0                      5 
-##           rcpplonglong           RcppProgress            rcrunchbase 
-##                      1                      0                      4 
-##                  RCurl          reactive-docs               ReadStat 
-##                      1                     30                      1 
-##                recipes    redesigned-barnacle                 remake 
-##                     21                      3                     14 
-##                 reprex                reshape                  rfmt2 
-##                      0                    159                      5 
-##               rifftron                    rio riotworkshop.github.io 
-##                      6                     10                      0 
-##                  rJava              rmarkdown                 rminds 
-##                      1                      1                     13 
-##               roxygen2               roxygen3                 rsmith 
-##                      4                     22                     28 
-##                RSQLite                 rtweet                    rv2 
-##                      1                     10                      7 
-##                  rvest              rworldmap                   rydn 
-##                    846                      2                      0 
-##            scagnostics                 scales                 secure 
-##                      8                     90                     91 
-##              sfhousing                    sfr                  shiny 
-##                     31                      0                      3 
-##           shinySignals               simpleS4               sinartra 
-##                     22                      0                     14 
-##                  sloop             spatialVis               sqlutils 
-##                     26                      5                      1 
-##       stat405-practice      stat405-resources  STAT545-UBC.github.io 
-##                      4                      7                      3 
-##             stationaRy                 strict              strptimer 
-##                      5                    128                      1 
-##                syuzhet              tanglekit              tidy-data 
-##                      2                      6                    195 
-##                toc-vis               unittest          USAboundaries 
-##                      7                      2                      1 
-##          usdanutrients                  vctrs                   vega 
-##                     23                     19                      1 
-##                vis-eda          vis-migration                   vita 
-##                     27                      5                      8 
-##                warncpp               webreadr                 webuse 
-##                      1                      1                      0 
-##                 weeder         weight-and-see            wesanderson 
-##                      4                      0                      8 
-##                whisker               wishlist 
-##                      6                      0</code></pre>
+<pre><code>##     15-state-of-the-union         15-student-papers 
+##                        24                        14 
+##                  500lines                     adv-r 
+##                         0                      1164 
+##                   appdirs                assertthat 
+##                         5                        92 
+##                 babynames            beautiful-data 
+##                        65                        10 
+##                     bench                    bigvis 
+##                         4                       266 
+##            bigvis-infovis            boxplots-paper 
+##                         5                        16 
+##                     broom                   builder 
+##                         8                         1 
+##          building-permits                cellranger 
+##                        59                         0 
+##                 classifly                clusterfly 
+##                         8                        12 
+##          cocktail-balance                commonmark 
+##                         1                         0 
+##            cran-downloads           cran-logs-dplyr 
+##                        15                         6 
+##             cran-packages                 cranatics 
+##                         6                         8 
+##                crantastic Creative-Commons-Markdown 
+##                        37                         0 
+##            csvy.github.io           data-baby-names 
+##                         0                       125 
+##             data-counties         data-fuel-economy 
+##                        21                        26 
+##                  data-gbd       data-housing-crisis 
+##                         4                        45 
+##               data-movies data-science-in-tidyverse 
+##                       166                        23 
+##               data-stride                  datafest 
+##                         2                         1 
+##                   decumar                densityvis 
+##                        48                         7 
+##              directlabels                 distpower 
+##                         5                         3 
+##                    docker                      docs 
+##                        17                         1 
+##         docsearch-configs             dplyrimpaladb 
+##                         0                         0 
+##                      drat                    dtplyr 
+##                         1                       105 
+##                   eggnogr                       emo 
+##                         9                       153 
+##                 example-r                 extrafont 
+##                         1                         4 
+##                 fec-dplyr           fivethirtyeight 
+##                        13                         5 
+##                   fortify               fueleconomy 
+##                         6                        15 
+##                   gdtools                      gg2v 
+##                         3                        63 
+##                ggenealogy                     ggmap 
+##                         4                         4 
+##                    ggplot                   ggplot1 
+##                         3                        15 
+##           ggplot2-bayarea              ggplot2-book 
+##                         9                       479 
+##              ggplot2-docs             ggplot2movies 
+##                         6                         4 
+##                    ggstat                  ggthemes 
+##                        73                        10 
+##                    gmailr                    gtable 
+##                         5                        28 
+##                 gun-sales                    hadcol 
+##                         3                         5 
+##                 hadladdin         hadley.github.com 
+##                         8                        10 
+##                 hclpicker         healthyr_preamble 
+##                         0                         7 
+##                     helpr        herndon-ash-pollin 
+##                        28                         3 
+##                  hflights         highlighting-kate 
+##                         5                         2 
+##                   httpbin                    httpuv 
+##                         2                         0 
+##                     ideas                 imvisoned 
+##                        10                         2 
+##                    kmeans                      l1tf 
+##                         1                        14 
+##                    layers                  lazyeval 
+##                         8                        82 
+##                   leaflet             leaflet-shiny 
+##                         1                         3 
+##                   legends                  lineprof 
+##                         4                        93 
+##                    linval                      lme4 
+##                         3                         0 
+##                  localmds                    lvplot 
+##                         6                        28 
+##              lvplot-paper             maplight-data 
+##                        11                         6 
+##         markdown-licenses                    meifly 
+##                         2                        11 
+##          mexico-mortality                   minimal 
+##                         7                         0 
+##                    monads                    mturkr 
+##                        42                        15 
+##                multidplyr                    mutatr 
+##                       320                        10 
+##                 mutatrGui               nasaweather 
+##                         3                         9 
+##                     neiss              nycflights13 
+##                        30                        51 
+##                  olctools               oldbookdown 
+##                         3                        39 
+##                   packman                  PivotalR 
+##                         4                         0 
+##                      plyr                 pop-flows 
+##                       469                         4 
+##                    precis             prodplotpaper 
+##                        64                         6 
+##              productplots                     profr 
+##                        28                        30 
+##                     proto                      pryr 
+##                        10                       143 
+##                  purrrlyr             qtpaint-demos 
+##                        68                         6 
+##         r-devel-san-clang               r-internals 
+##                         3                       116 
+##               r-on-github                    r-pkgs 
+##                        33                       227 
+##                  r-python                  r-source 
+##                        59                         2 
+##                  r-travis                    r-yaml 
+##                         6                         1 
+##                      r2d3                      r4ds 
+##                       179                      1243 
+##       ranking-correlation                 rastermap 
+##                         8                         6 
+##                   rblocks                   Rcereal 
+##                         4                         1 
+##                      Rcpp              rcpp-gallery 
+##                         1                         0 
+##              RcppDateTime              rcpplonglong 
+##                         4                         1 
+##              RcppProgress               rcrunchbase 
+##                         0                         4 
+##                     RCurl             reactive-docs 
+##                         1                        31 
+##                  ReadStat                   recipes 
+##                         1                        25 
+##       redesigned-barnacle                    remake 
+##                         3                        14 
+##                    reprex                   reshape 
+##                         0                       172 
+##                     rfmt2                  rifftron 
+##                         5                         5 
+##                       rio    riotworkshop.github.io 
+##                        10                         0 
+##                     rJava                 rmarkdown 
+##                         1                         1 
+##                    rminds                  roxygen2 
+##                        13                         5 
+##                  roxygen3                    rsmith 
+##                        22                        30 
+##                   RSQLite                    rtweet 
+##                         2                        11 
+##                       rv2                     rvest 
+##                         8                       915 
+##                 rworldmap                      rydn 
+##                         2                         0 
+##               scagnostics                    scales 
+##                         8                       103 
+##                    secure                 sfhousing 
+##                        96                        31 
+##                       sfr                     shiny 
+##                         0                         3 
+##              shinySignals                  simpleS4 
+##                        23                         0 
+##                  sinartra                     sloop 
+##                        14                        33 
+##                spatialVis                  sqlutils 
+##                         5                         1 
+##          stat405-practice         stat405-resources 
+##                         4                         7 
+##     STAT545-UBC.github.io                stationaRy 
+##                         3                         5 
+##                  stats337                    strict 
+##                      1065                       151 
+##                 strptimer                   syuzhet 
+##                         1                         2 
+##                 tanglekit                 tidy-data 
+##                         7                       223 
+##                   toc-vis                  unittest 
+##                         7                         2 
+##             USAboundaries             usdanutrients 
+##                         2                        25 
+##                     vctrs                      vega 
+##                        23                         1 
+##                   vis-eda             vis-migration 
+##                        27                         6 
+##                      vita                   warncpp 
+##                         8                         2 
+##                  webreadr                    webuse 
+##                         1                         0</code></pre>
 </div>
 <div id="exercise" class="section level3">
 <h3>Exercise</h3>
@@ -1237,7 +1253,7 @@ sapply(had, function(x) x$watchers)</code></pre>
 <p>There are many, many ways to work with lists. What follows is a very brief nod to a few features from packages that help address list complexity.</p>
 <div id="rlist" class="section level4">
 <h4>rlist</h4>
-<p><strong>rlist</strong> includes a set of very useful tools for list manipulation<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a>.</p>
+<p><strong>rlist</strong> includes a set of very useful tools for list manipulation<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>.</p>
 <p>Some highlights:</p>
 <ul>
 <li><code>list.map()</code></li>
@@ -1255,7 +1271,7 @@ list.table(had, fork)</code></pre>
 </div>
 <div id="purrr" class="section level4">
 <h4>purrr</h4>
-<p>According to its author, Hadley Wickham, the <strong>purrr</strong> package, “… fills in the missing pieces in R’s functional programming tools: it’s designed to make your pure functions purrr”<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a>. This is especially useful for working with lists when using lists for <em>programmatic</em> purposes, like writing functions or packages. But there are applications for <em>interactive</em> list manipulation with <strong>purrr</strong> as well. The following are particularly helpful:</p>
+<p>According to its author, Hadley Wickham, the <strong>purrr</strong> package, “… fills in the missing pieces in R’s functional programming tools: it’s designed to make your pure functions purrr”<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>. This is especially useful for working with lists when using lists for <em>programmatic</em> purposes, like writing functions or packages. But there are applications for <em>interactive</em> list manipulation with <strong>purrr</strong> as well. The following are particularly helpful:</p>
 <ul>
 <li><code>map()</code>: allows functions to be passed to each element of the list (roughly analogous to <code>sapply()</code> or <code>lapply()</code>)</li>
 <li><code>flatten()</code>: simplifies a list to a vector (roughly analogous to <code>unlist()</code>)</li>
@@ -1269,14 +1285,14 @@ list.table(had, fork)</code></pre>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p><a href="http://r4ds.had.co.nz/lists.html" class="uri">http://r4ds.had.co.nz/lists.html</a><a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p><a href="http://yihui.name/en/2010/10/on-the-gory-loops-in-r/" class="uri">http://yihui.name/en/2010/10/on-the-gory-loops-in-r/</a><a href="#fnref2">↩</a></p></li>
-<li id="fn3"><p><a href="http://adv-r.had.co.nz/Functional-programming.html#anonymous-functions" class="uri">http://adv-r.had.co.nz/Functional-programming.html#anonymous-functions</a><a href="#fnref3">↩</a></p></li>
-<li id="fn4"><p><a href="https://developer.github.com/v3/" class="uri">https://developer.github.com/v3/</a><a href="#fnref4">↩</a></p></li>
-<li id="fn5"><p><a href="https://en.wikipedia.org/wiki/Semi-structured_data" class="uri">https://en.wikipedia.org/wiki/Semi-structured_data</a><a href="#fnref5">↩</a></p></li>
-<li id="fn6"><p><a href="http://developers.squarespace.com/what-is-json/" class="uri">http://developers.squarespace.com/what-is-json/</a><a href="#fnref6">↩</a></p></li>
-<li id="fn7"><p><a href="https://renkun.me/rlist-tutorial/" class="uri">https://renkun.me/rlist-tutorial/</a><a href="#fnref7">↩</a></p></li>
-<li id="fn8"><p><a href="https://blog.rstudio.org/2015/09/29/purrr-0-1-0/" class="uri">https://blog.rstudio.org/2015/09/29/purrr-0-1-0/</a><a href="#fnref8">↩</a></p></li>
+<li id="fn1"><p><a href="http://r4ds.had.co.nz/lists.html" class="uri">http://r4ds.had.co.nz/lists.html</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="http://yihui.name/en/2010/10/on-the-gory-loops-in-r/" class="uri">http://yihui.name/en/2010/10/on-the-gory-loops-in-r/</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p><a href="http://adv-r.had.co.nz/Functional-programming.html#anonymous-functions" class="uri">http://adv-r.had.co.nz/Functional-programming.html#anonymous-functions</a><a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p><a href="https://developer.github.com/v3/" class="uri">https://developer.github.com/v3/</a><a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p><a href="https://en.wikipedia.org/wiki/Semi-structured_data" class="uri">https://en.wikipedia.org/wiki/Semi-structured_data</a><a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p><a href="http://developers.squarespace.com/what-is-json/" class="uri">http://developers.squarespace.com/what-is-json/</a><a href="#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p><a href="https://renkun.me/rlist-tutorial/" class="uri">https://renkun.me/rlist-tutorial/</a><a href="#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p><a href="https://blog.rstudio.org/2015/09/29/purrr-0-1-0/" class="uri">https://blog.rstudio.org/2015/09/29/purrr-0-1-0/</a><a href="#fnref8" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 

@@ -308,7 +308,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">BIMS8382</a>
+      <a class="navbar-brand" href="index.html">BIMS 8382 Spring 2018</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -332,62 +332,6 @@ div.tocify {
      
     Data
   </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-book"></span>
-     
-    Workshops
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="r-basics.html">R Basics</a>
-    </li>
-    <li>
-      <a href="r-dataframes.html">Data Frames</a>
-    </li>
-    <li>
-      <a href="r-dplyr-yeast.html">Data Manipulation</a>
-    </li>
-    <li>
-      <a href="r-tidy.html">Tidying data</a>
-    </li>
-    <li>
-      <a href="r-lists.html">List Manipulation</a>
-    </li>
-    <li>
-      <a href="r-interactive-viz.html">Interactive Visualization with JavaScript and R</a>
-    </li>
-    <li>
-      <a href="r-shiny.html">Building Shiny Web Apps in R</a>
-    </li>
-    <li>
-      <a href="r-ncbi.html">Harvesting Data from NCBI</a>
-    </li>
-    <li>
-      <a href="r-viz-gapminder.html">Data Visualization</a>
-    </li>
-    <li>
-      <a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a>
-    </li>
-    <li>
-      <a href="r-stats.html">Essential Statistics with R</a>
-    </li>
-    <li>
-      <a href="r-survival.html">Survival Analysis with TCGA Data</a>
-    </li>
-    <li>
-      <a href="r-ggtree.html">Drawing &amp; annotating phylogenetic trees</a>
-    </li>
-    <li>
-      <a href="r-rnaseq-airway.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
-    </li>
-  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -432,6 +376,9 @@ div.tocify {
     <li>
       <a href="r-rnaseq-airway.html">RNA-Seq Data Analysis</a>
     </li>
+    <li>
+      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">--- Homework ---</li>
     <li>
@@ -448,9 +395,6 @@ div.tocify {
     </li>
     <li>
       <a href="r-rnaseq-homework.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
     </li>
   </ul>
 </li>
@@ -471,7 +415,7 @@ div.tocify {
       <a href="help.html">Further resources</a>
     </li>
     <li>
-      <a href="https://github.com/bioconnector/workshops">Source code for this site</a>
+      <a href="https://github.com/bims8382/2018">Source code for this site</a>
     </li>
   </ul>
 </li>
@@ -529,18 +473,18 @@ gm &lt;- read_csv(&quot;data/gapminder.csv&quot;)
 # Take a look
 gm</code></pre>
 <pre><code>## # A tibble: 1,704 x 6
-##        country continent  year lifeExp      pop gdpPercap
-##          &lt;chr&gt;     &lt;chr&gt; &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
-##  1 Afghanistan      Asia  1952  28.801  8425333  779.4453
-##  2 Afghanistan      Asia  1957  30.332  9240934  820.8530
-##  3 Afghanistan      Asia  1962  31.997 10267083  853.1007
-##  4 Afghanistan      Asia  1967  34.020 11537966  836.1971
-##  5 Afghanistan      Asia  1972  36.088 13079460  739.9811
-##  6 Afghanistan      Asia  1977  38.438 14880372  786.1134
-##  7 Afghanistan      Asia  1982  39.854 12881816  978.0114
-##  8 Afghanistan      Asia  1987  40.822 13867957  852.3959
-##  9 Afghanistan      Asia  1992  41.674 16317921  649.3414
-## 10 Afghanistan      Asia  1997  41.763 22227415  635.3414
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;chr&gt;       &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1952    28.8  8425333       779
+##  2 Afghanistan Asia       1957    30.3  9240934       821
+##  3 Afghanistan Asia       1962    32.0 10267083       853
+##  4 Afghanistan Asia       1967    34.0 11537966       836
+##  5 Afghanistan Asia       1972    36.1 13079460       740
+##  6 Afghanistan Asia       1977    38.4 14880372       786
+##  7 Afghanistan Asia       1982    39.9 12881816       978
+##  8 Afghanistan Asia       1987    40.8 13867957       852
+##  9 Afghanistan Asia       1992    41.7 16317921       649
+## 10 Afghanistan Asia       1997    41.8 22227415       635
 ## # ... with 1,694 more rows</code></pre>
 </div>
 <div id="problem-set" class="section level3">
@@ -554,12 +498,12 @@ gm</code></pre>
   summarize(n=n_distinct(country))</code></pre>
 <pre><code>## # A tibble: 5 x 2
 ##   continent     n
-##       &lt;chr&gt; &lt;int&gt;
-## 1    Africa    52
-## 2  Americas    25
-## 3      Asia    33
-## 4    Europe    30
-## 5   Oceania     2</code></pre>
+##   &lt;chr&gt;     &lt;int&gt;
+## 1 Africa       52
+## 2 Americas     25
+## 3 Asia         33
+## 4 Europe       30
+## 5 Oceania       2</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Which European nation had the lowest GDP per capita in 1997? (<em>Hint:</em> filter, arrange, <code>head(n=1)</code>)</li>
 </ol>
@@ -569,8 +513,8 @@ gm</code></pre>
     head(1)</code></pre>
 <pre><code>## # A tibble: 1 x 6
 ##   country continent  year lifeExp     pop gdpPercap
-##     &lt;chr&gt;     &lt;chr&gt; &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;     &lt;dbl&gt;
-## 1 Albania    Europe  1997   72.95 3428038  3193.055</code></pre>
+##   &lt;chr&gt;   &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;   &lt;int&gt;     &lt;dbl&gt;
+## 1 Albania Europe     1997    73.0 3428038      3193</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>According to the data available, what was the average life expectancy across each continent in the 1980s? (<em>Hint:</em> filter, group_by, summarize)</li>
 </ol>
@@ -580,12 +524,12 @@ gm</code></pre>
     summarize(mean_lifeExp = mean(lifeExp))</code></pre>
 <pre><code>## # A tibble: 5 x 2
 ##   continent mean_lifeExp
-##       &lt;chr&gt;        &lt;dbl&gt;
-## 1    Africa     52.46883
-## 2  Americas     67.15978
-## 3      Asia     63.73456
-## 4    Europe     73.22428
-## 5   Oceania     74.80500</code></pre>
+##   &lt;chr&gt;            &lt;dbl&gt;
+## 1 Africa            52.5
+## 2 Americas          67.2
+## 3 Asia              63.7
+## 4 Europe            73.2
+## 5 Oceania           74.8</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>What 5 countries have the highest total GDP over all years combined? (<em>Hint:</em> GDP per capita is simply GDP divided by the total population size. To get GDP back, you’d mutate to calculate GDP as the product of GDP per capita times the population size. Mutate, group_by, summarize, arrange, <code>head(n=5)</code>)</li>
 </ol>
@@ -596,13 +540,13 @@ gm</code></pre>
     arrange(desc(Total.GDP)) %&gt;%
     head(5)</code></pre>
 <pre><code>## # A tibble: 5 x 2
-##          country    Total.GDP
-##            &lt;chr&gt;        &lt;dbl&gt;
-## 1  United States 7.676192e+13
-## 2          Japan 2.543482e+13
-## 3          China 2.039549e+13
-## 4        Germany 1.949689e+13
-## 5 United Kingdom 1.328937e+13</code></pre>
+##   country             Total.GDP
+##   &lt;chr&gt;                   &lt;dbl&gt;
+## 1 United States  76761922948366
+## 2 Japan          25434820411847
+## 3 China          20395490651693
+## 4 Germany        19496885689973
+## 5 United Kingdom 13289373709279</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>What countries and years had life expectancies of <em>at least</em> 80 years? <em>N.b. only output the columns of interest: country, life expectancy and year (in that order).</em></li>
 </ol>
@@ -610,18 +554,18 @@ gm</code></pre>
     filter(lifeExp &gt;= 80) %&gt;%
     select(country, lifeExp, year)</code></pre>
 <pre><code>## # A tibble: 22 x 3
-##             country lifeExp  year
-##               &lt;chr&gt;   &lt;dbl&gt; &lt;int&gt;
-##  1        Australia  80.370  2002
-##  2        Australia  81.235  2007
-##  3           Canada  80.653  2007
-##  4           France  80.657  2007
-##  5 Hong Kong, China  80.000  1997
-##  6 Hong Kong, China  81.495  2002
-##  7 Hong Kong, China  82.208  2007
-##  8          Iceland  80.500  2002
-##  9          Iceland  81.757  2007
-## 10           Israel  80.745  2007
+##    country          lifeExp  year
+##    &lt;chr&gt;              &lt;dbl&gt; &lt;int&gt;
+##  1 Australia           80.4  2002
+##  2 Australia           81.2  2007
+##  3 Canada              80.7  2007
+##  4 France              80.7  2007
+##  5 Hong Kong, China    80.0  1997
+##  6 Hong Kong, China    81.5  2002
+##  7 Hong Kong, China    82.2  2007
+##  8 Iceland             80.5  2002
+##  9 Iceland             81.8  2007
+## 10 Israel              80.7  2007
 ## # ... with 12 more rows</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>What 10 countries have the strongest correlation (in either direction) between life expectancy and per capita GDP?</li>
@@ -632,18 +576,18 @@ gm</code></pre>
     arrange(desc(abs(cor))) %&gt;%
     head(10)</code></pre>
 <pre><code>## # A tibble: 10 x 2
-##           country       cor
-##             &lt;chr&gt;     &lt;dbl&gt;
-##  1         France 0.9962239
-##  2        Austria 0.9929642
-##  3        Belgium 0.9927496
-##  4         Norway 0.9921416
-##  5           Oman 0.9907526
-##  6 United Kingdom 0.9898930
-##  7          Italy 0.9897600
-##  8         Israel 0.9884894
-##  9        Denmark 0.9870896
-## 10      Australia 0.9864457</code></pre>
+##    country          cor
+##    &lt;chr&gt;          &lt;dbl&gt;
+##  1 France         0.996
+##  2 Austria        0.993
+##  3 Belgium        0.993
+##  4 Norway         0.992
+##  5 Oman           0.991
+##  6 United Kingdom 0.990
+##  7 Italy          0.990
+##  8 Israel         0.988
+##  9 Denmark        0.987
+## 10 Australia      0.986</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>Which combinations of continent (besides Asia) and year have the highest average population across all countries? <em>N.b. your output should include all results sorted by highest average population</em>. (<em>Hint:</em> filter where continent <code>!=</code> Asia, group by two variables, summarize, then arrange.)</li>
 </ol>
@@ -655,17 +599,17 @@ gm</code></pre>
 <pre><code>## # A tibble: 48 x 3
 ## # Groups:   continent [4]
 ##    continent  year mean.pop
-##        &lt;chr&gt; &lt;int&gt;    &lt;dbl&gt;
-##  1  Americas  2007 35954847
-##  2  Americas  2002 33990910
-##  3  Americas  1997 31876016
-##  4  Americas  1992 29570964
-##  5  Americas  1987 27310159
-##  6  Americas  1982 25211637
-##  7  Americas  1977 23122708
-##  8  Americas  1972 21175368
-##  9    Europe  2007 19536618
-## 10    Europe  2002 19274129
+##    &lt;chr&gt;     &lt;int&gt;    &lt;dbl&gt;
+##  1 Americas   2007 35954847
+##  2 Americas   2002 33990910
+##  3 Americas   1997 31876016
+##  4 Americas   1992 29570964
+##  5 Americas   1987 27310159
+##  6 Americas   1982 25211637
+##  7 Americas   1977 23122708
+##  8 Americas   1972 21175368
+##  9 Europe     2007 19536618
+## 10 Europe     2002 19274129
 ## # ... with 38 more rows</code></pre>
 <ol start="8" style="list-style-type: decimal">
 <li>Which three countries have had the most consistent population estimates (i.e. lowest standard deviation) across the years of available data?</li>
@@ -676,11 +620,11 @@ gm</code></pre>
     arrange(sd.pop) %&gt;%
     head(3)</code></pre>
 <pre><code>## # A tibble: 3 x 2
-##                 country   sd.pop
-##                   &lt;chr&gt;    &lt;dbl&gt;
-## 1 Sao Tome and Principe 45906.14
-## 2               Iceland 48541.68
-## 3            Montenegro 99737.94</code></pre>
+##   country               sd.pop
+##   &lt;chr&gt;                  &lt;dbl&gt;
+## 1 Sao Tome and Principe  45906
+## 2 Iceland                48542
+## 3 Montenegro             99738</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li><strong><em>Bonus!</em></strong> Which observations indicate that the population of a country has <em>decreased</em> from the previous year <strong>and</strong> the life expectancy has <em>increased</em> from the previous year? See <a href="https://cran.r-project.org/web/packages/dplyr/vignettes/window-functions.html">the vignette on window functions</a>.</li>
 </ol>
@@ -690,18 +634,18 @@ gm</code></pre>
   filter(pop &lt; lag(pop) &amp; lifeExp &gt; lag(lifeExp))</code></pre>
 <pre><code>## # A tibble: 36 x 6
 ## # Groups:   country [22]
-##                   country continent  year lifeExp      pop  gdpPercap
-##                     &lt;chr&gt;     &lt;chr&gt; &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;
-##  1            Afghanistan      Asia  1982  39.854 12881816   978.0114
-##  2 Bosnia and Herzegovina    Europe  1992  72.178  4256013  2546.7814
-##  3 Bosnia and Herzegovina    Europe  1997  73.244  3607000  4766.3559
-##  4               Bulgaria    Europe  2002  72.140  7661799  7696.7777
-##  5               Bulgaria    Europe  2007  73.005  7322858 10680.7928
-##  6                Croatia    Europe  1997  73.680  4444595  9875.6045
-##  7         Czech Republic    Europe  1997  74.010 10300707 16048.5142
-##  8         Czech Republic    Europe  2002  75.510 10256295 17596.2102
-##  9         Czech Republic    Europe  2007  76.486 10228744 22833.3085
-## 10      Equatorial Guinea    Africa  1977  42.024   192675   958.5668
+##    country                continent  year lifeExp      pop gdpPercap
+##    &lt;chr&gt;                  &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan            Asia       1982    39.9 12881816       978
+##  2 Bosnia and Herzegovina Europe     1992    72.2  4256013      2547
+##  3 Bosnia and Herzegovina Europe     1997    73.2  3607000      4766
+##  4 Bulgaria               Europe     2002    72.1  7661799      7697
+##  5 Bulgaria               Europe     2007    73.0  7322858     10681
+##  6 Croatia                Europe     1997    73.7  4444595      9876
+##  7 Czech Republic         Europe     1997    74.0 10300707     16049
+##  8 Czech Republic         Europe     2002    75.5 10256295     17596
+##  9 Czech Republic         Europe     2007    76.5 10228744     22833
+## 10 Equatorial Guinea      Africa     1977    42.0   192675       959
 ## # ... with 26 more rows</code></pre>
 </div>
 

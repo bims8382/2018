@@ -308,7 +308,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">BIMS8382</a>
+      <a class="navbar-brand" href="index.html">BIMS 8382 Spring 2018</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -332,62 +332,6 @@ div.tocify {
      
     Data
   </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-book"></span>
-     
-    Workshops
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="r-basics.html">R Basics</a>
-    </li>
-    <li>
-      <a href="r-dataframes.html">Data Frames</a>
-    </li>
-    <li>
-      <a href="r-dplyr-yeast.html">Data Manipulation</a>
-    </li>
-    <li>
-      <a href="r-tidy.html">Tidying data</a>
-    </li>
-    <li>
-      <a href="r-lists.html">List Manipulation</a>
-    </li>
-    <li>
-      <a href="r-interactive-viz.html">Interactive Visualization with JavaScript and R</a>
-    </li>
-    <li>
-      <a href="r-shiny.html">Building Shiny Web Apps in R</a>
-    </li>
-    <li>
-      <a href="r-ncbi.html">Harvesting Data from NCBI</a>
-    </li>
-    <li>
-      <a href="r-viz-gapminder.html">Data Visualization</a>
-    </li>
-    <li>
-      <a href="r-rmarkdown.html">Reproducible Research &amp; RMarkdown</a>
-    </li>
-    <li>
-      <a href="r-stats.html">Essential Statistics with R</a>
-    </li>
-    <li>
-      <a href="r-survival.html">Survival Analysis with TCGA Data</a>
-    </li>
-    <li>
-      <a href="r-ggtree.html">Drawing &amp; annotating phylogenetic trees</a>
-    </li>
-    <li>
-      <a href="r-rnaseq-airway.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
-    </li>
-  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -432,6 +376,9 @@ div.tocify {
     <li>
       <a href="r-rnaseq-airway.html">RNA-Seq Data Analysis</a>
     </li>
+    <li>
+      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">--- Homework ---</li>
     <li>
@@ -448,9 +395,6 @@ div.tocify {
     </li>
     <li>
       <a href="r-rnaseq-homework.html">RNA-seq Data Analysis</a>
-    </li>
-    <li>
-      <a href="r-predictive-modeling.html">Predictive Analytics &amp; Forecasting Influenza</a>
     </li>
   </ul>
 </li>
@@ -471,7 +415,7 @@ div.tocify {
       <a href="help.html">Further resources</a>
     </li>
     <li>
-      <a href="https://github.com/bioconnector/workshops">Source code for this site</a>
+      <a href="https://github.com/bims8382/2018">Source code for this site</a>
     </li>
   </ul>
 </li>
@@ -557,8 +501,8 @@ stress</code></pre>
 </ol>
 <p><strong>HINT</strong>: The <code>quantile()</code> function defaults to 0, 0.25, .5, .75 and 1 but can accept arbitrary threshholds. See <code>?quantile</code> and look for the <code>probs</code> argument.</p>
 <pre class="r"><code>quantile(stress$dpmaxdo, probs = 0.99)</code></pre>
-<pre><code>##      99% 
-## 31948.56</code></pre>
+<pre><code>##   99% 
+## 31949</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Use <strong>ggplot2</strong> to create a histogram showing the distribution of the <code>dpmaxdo</code> values.</li>
 </ol>
@@ -574,18 +518,18 @@ ggplot(stress, aes(dpmaxdo)) +
 ##  Two Sample t-test
 ## 
 ## data:  dpmaxdo by any.event
-## t = 2.0707, df = 556, p-value = 0.03885
+## t = 2, df = 600, p-value = 0.04
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##    60.12983 2279.88469
+##    60.1 2279.9
 ## sample estimates:
 ## mean in group 0 mean in group 1 
-##        18736.49        17566.48</code></pre>
+##           18736           17566</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>What is the p-value for this test? Make sure this is accessed from the results (using the <code>$</code> operator) rather than simply re-typing the value. Feel free to extract the p-value directly from the t-test, or first use <strong>broom::tidy()</strong> to tidy the model first.</li>
 </ol>
 <pre class="r"><code>t.test(dpmaxdo ~ any.event, data = stress, var.equal = TRUE)$p.value</code></pre>
-<pre><code>## [1] 0.03885185</code></pre>
+<pre><code>## [1] 0.0389</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>The smoking history column (<code>hxofCig</code>) is represented categorically as “heavy”, “moderate” and “non-smoker”. Create a margin table showing the total counts of individuals in each smoking history category, for all individuals who either did or did not have any cardiac event by smoking status. Next, show proportions over the row margin (what percentage of each category had any cardiac event?).</li>
 </ol>
@@ -616,7 +560,7 @@ addmargins(xt)</code></pre>
 ##  Pearson&#39;s Chi-squared test
 ## 
 ## data:  xt
-## X-squared = 2.0794, df = 2, p-value = 0.3536</code></pre>
+## X-squared = 2, df = 2, p-value = 0.4</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li>Load the <strong>broom</strong> package and “tidy” the model output above. If you don’t have the broom package, install it first.</li>
 </ol>
@@ -625,8 +569,8 @@ addmargins(xt)</code></pre>
 
 library(broom)
 tidy(chisq.test(xt))</code></pre>
-<pre><code>##   statistic   p.value parameter                     method
-## 1  2.079445 0.3535527         2 Pearson&#39;s Chi-squared test</code></pre>
+<pre><code>##   statistic p.value parameter                     method
+## 1      2.08   0.354         2 Pearson&#39;s Chi-squared test</code></pre>
 </div>
 <div id="muscular-dystrophy-genetics" class="section level2">
 <h2>Muscular Dystrophy Genetics</h2>
@@ -639,7 +583,7 @@ tidy(chisq.test(xt))</code></pre>
 <li>What is the average value for lactate dehydrogenase?</li>
 </ol>
 <pre class="r"><code>mean(dmd$ld, na.rm = TRUE)</code></pre>
-<pre><code>## [1] 198.5891</code></pre>
+<pre><code>## [1] 199</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>The four serum markers (creatine kinase, hemopexin, pyruvate kinase and lactate dehydrogenase) are all predictors of interest in this case. Use <strong>ggplot2</strong> to create histograms to assess the normality of the distribution for each of these variables.</li>
 </ol>
@@ -673,23 +617,23 @@ summary(fit)</code></pre>
 ##     data = dmd)
 ## 
 ## Deviance Residuals: 
-##      Min        1Q    Median        3Q       Max  
-## -2.35125  -0.41514  -0.15394   0.08287   2.40056  
+##     Min       1Q   Median       3Q      Max  
+## -2.3512  -0.4151  -0.1539   0.0829   2.4006  
 ## 
 ## Coefficients:
-##               Estimate Std. Error z value Pr(&gt;|z|)
-## (Intercept) -25.958905   4.287090  -6.055 1.40e-09
-## log(ck)       2.862509   0.656316   4.361 1.29e-05
-## h             0.112805   0.028248   3.993 6.51e-05
-## pk            0.103212   0.043780   2.358   0.0184
-## ld            0.012836   0.005259   2.441   0.0147
+##              Estimate Std. Error z value Pr(&gt;|z|)
+## (Intercept) -25.95891    4.28709   -6.06  1.4e-09
+## log(ck)       2.86251    0.65632    4.36  1.3e-05
+## h             0.11280    0.02825    3.99  6.5e-05
+## pk            0.10321    0.04378    2.36    0.018
+## ld            0.01284    0.00526    2.44    0.015
 ## 
 ## (Dispersion parameter for binomial family taken to be 1)
 ## 
 ##     Null deviance: 250.077  on 193  degrees of freedom
 ## Residual deviance:  99.005  on 189  degrees of freedom
 ##   (15 observations deleted due to missingness)
-## AIC: 109.01
+## AIC: 109
 ## 
 ## Number of Fisher Scoring iterations: 7</code></pre>
 <ol start="5" style="list-style-type: decimal">
@@ -697,7 +641,7 @@ summary(fit)</code></pre>
 </ol>
 <pre class="r"><code>round(exp(fit$coefficients), 4)</code></pre>
 <pre><code>## (Intercept)     log(ck)           h          pk          ld 
-##      0.0000     17.5054      1.1194      1.1087      1.0129</code></pre>
+##        0.00       17.51        1.12        1.11        1.01</code></pre>
 </div>
 
 <div class="footer">
