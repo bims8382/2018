@@ -11,7 +11,7 @@ output:
 
 This course introduces methods, tools, and software for reproducibly managing, manipulating, analyzing, and visualizing large-scale biomedical data. Specifically, the course introduces the R statistical computing environment and packages for manipulating and visualizing high-dimensional data, covers strategies for reproducible research, and culminates with analyses of real experimental NGS data using R and Bioconductor packages.
 
-**[Click here to download the entire course archive as a zip file.](https://github.com/bims8382/2018/archive/master.zip)** Once downloaded and extracted, double-click the **`index.html`** file in the extracted folder to view the course material offline.
+**[Click here to download the entire course archive as a zip file.](https://github.com/bims8382/2018/archive/gh-pages.zip)** Once downloaded and extracted, double-click the **`index.html`** file in the extracted folder to view the course material offline.
 
 ### Course Material
 
