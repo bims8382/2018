@@ -1,26 +1,42 @@
 ---
-title: "UVA HSL Research & Data Courses"
+title: "BIMS8382 Spring 2018"
 output: 
   html_document:
-    toc: yes
+    toc: no
 ---
 
 ### BIMS 8382
 
-**[BIMS 8382](bims8382.html)** is a graduate class that will run in Spring 2018. Please see the [BIMS 8382 syllabus](bims8382.html) for more information.
+**[BIMS 8382](bims8382.html)** is a graduate class that runs every Spring semester. This is the archival site for the course that ran in Spring 2018. Please see the [BIMS 8382 syllabus](bims8382.html) for more information. 
 
-### Workshops
+This course introduces methods, tools, and software for reproducibly managing, manipulating, analyzing, and visualizing large-scale biomedical data. Specifically, the course introduces the R statistical computing environment and packages for manipulating and visualizing high-dimensional data, covers strategies for reproducible research, and culminates with analyses of real experimental NGS data using R and Bioconductor packages.
 
-Register at **[data.hsl.virginia.edu](http://data.hsl.virginia.edu/)**.
+**[Click here to download the entire course archive as a zip file.](https://github.com/bims8382/2018/archive/master.zip)** Once downloaded and extracted, double-click the **`index.html`** file in the extracted folder to view the course material offline.
 
-These workshops introduce methods, tools, and software for reproducibly managing, manipulating, analyzing, and visualizing large-scale biomedical data using the R statistical computing environment. Visit [data.hsl.virginia.edu](http://data.hsl.virginia.edu/) to register.
+### Course Material
 
-**_IMPORTANT_: [Click here for instructions on setting up your computer for any of these workshops](setup.html).** Each workshop involves lots of hands-on practice coding, and you'll need to download and install some free software **_prior to our first class_**. This may take up to an hour or so, and please do not hesitate to [email one of the instructors](people.html) _prior to the workshop_ if you are having difficulty.
+#### Lesson transcripts & code
 
-### THRIV Data Science
+1. [R Basics](r-basics.html)
+1. [Data Frames](r-dataframes.html)
+1. [Data Manipulation](r-dplyr-yeast.html)
+1. [Tidying data](r-tidy.html)
+1. [Data Visualization](r-viz-gapminder.html)
+1. [Reproducible Research & RMarkdown](r-rmarkdown.html)
+1. [Essential Statistics with R](r-stats.html)
+1. [Survival Analysis with TCGA Data](r-survival.html)
+1. [RNA-seq data analysis](r-rnaseq-airway.html)
+1. [Predictive Analytics & Forecasting Influenza](r-predictive-modeling.html)
 
-The [THRIV Scholars Data Science Training Program](thriv.html) is a seven-part series of courses on the essentials of biological data science directed toward junior faculty seeking a clinical and translational research career. Please see the [THRIV syllabus](thriv.html) for more information.
+#### Homework assignments
 
+1. [Data Manipulation](r-dplyr-homework.html)
+1. [Data Visualization](r-viz-homework.html)
+1. [Reproducible Research & RMarkdown](r-rmarkdown-homework.html)
+1. [Essential Statistics](r-stats-homework.html)
+1. [RNA-seq data analysis](r-rnaseq-homework.html)
+
+----
 
 ### FAQ
 

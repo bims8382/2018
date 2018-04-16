@@ -1,10 +1,10 @@
 # See http://rmarkdown.rstudio.com/rmarkdown_websites.html
 
 #name: "UVA HSL Research & Data Courses"
-name: "BIMS 8382"
+name: "BIMS 8382 Spring 2018"
 
 navbar:
-  title: "BIMS8382"
+  title: "BIMS 8382 Spring 2018"
   icon: fa-home
   type: inverse
   left:
@@ -18,39 +18,39 @@ navbar:
       icon: fa-download
       href: "data.html"
 
-    - text: "Workshops"
-      icon: fa-book
-      menu:
-        - text: "R Basics"
-          href: r-basics.html
-        - text: "Data Frames"
-          href: r-dataframes.html
-        - text: "Data Manipulation"
-          href: r-dplyr-yeast.html
-        - text: "Tidying data"
-          href: r-tidy.html
-        - text: "List Manipulation"
-          href: r-lists.html
-        - text: "Interactive Visualization with JavaScript and R"
-          href: r-interactive-viz.html
-        - text: "Building Shiny Web Apps in R"
-          href: r-shiny.html
-        - text: "Harvesting Data from NCBI"
-          href: r-ncbi.html
-        - text: "Data Visualization"
-          href: r-viz-gapminder.html
-        - text: "Reproducible Research & RMarkdown"
-          href: r-rmarkdown.html
-        - text: "Essential Statistics with R"
-          href: r-stats.html
-        - text: "Survival Analysis with TCGA Data"
-          href: r-survival.html
-        - text: "Drawing & annotating phylogenetic trees"
-          href: r-ggtree.html
-        - text: "RNA-seq Data Analysis"
-          href: r-rnaseq-airway.html
-        - text: "Predictive Analytics & Forecasting Influenza"
-          href: r-predictive-modeling.html
+#    - text: "Workshops"
+#      icon: fa-book
+#      menu:
+#        - text: "R Basics"
+#          href: r-basics.html
+#        - text: "Data Frames"
+#          href: r-dataframes.html
+#        - text: "Data Manipulation"
+#          href: r-dplyr-yeast.html
+#        - text: "Tidying data"
+#          href: r-tidy.html
+#        - text: "List Manipulation"
+#          href: r-lists.html
+#        - text: "Interactive Visualization with JavaScript and R"
+#          href: r-interactive-viz.html
+#        - text: "Building Shiny Web Apps in R"
+#          href: r-shiny.html
+#        - text: "Harvesting Data from NCBI"
+#          href: r-ncbi.html
+#        - text: "Data Visualization"
+#          href: r-viz-gapminder.html
+#        - text: "Reproducible Research & RMarkdown"
+#          href: r-rmarkdown.html
+#        - text: "Essential Statistics with R"
+#          href: r-stats.html
+#        - text: "Survival Analysis with TCGA Data"
+#          href: r-survival.html
+#        - text: "Drawing & annotating phylogenetic trees"
+#          href: r-ggtree.html
+#        - text: "RNA-seq Data Analysis"
+#          href: r-rnaseq-airway.html
+#        - text: "Predictive Analytics & Forecasting Influenza"
+#          href: r-predictive-modeling.html
 
 #    - text: "THRIV"
 #      icon: fa-university
@@ -115,6 +115,8 @@ navbar:
           href: r-survival.html
         - text: "RNA-Seq Data Analysis"
           href: r-rnaseq-airway.html
+        - text: "Predictive Analytics & Forecasting Influenza"
+          href: r-predictive-modeling.html
         - text: "----"
         - text: "--- Homework ---"
         - text: "Data Manipulation"
@@ -127,8 +129,6 @@ navbar:
           href: r-stats-homework.html
         - text: "RNA-seq Data Analysis"
           href: r-rnaseq-homework.html
-        - text: "Predictive Analytics & Forecasting Influenza"
-          href: r-predictive-modeling.html
 
 
   right:
@@ -139,7 +139,7 @@ navbar:
         - text: "Further resources"
           href: help.html
         - text: "Source code for this site"
-          href: https://github.com/bioconnector/workshops
+          href: https://github.com/bims8382/2018
 output:
   html_document:
     theme: default
